@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Dierickx Simon - HE202205</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Portfolio</h1>
+        <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!--SECTION # 1-->
+    <div class="main-content">
+        <!--Partie avec mes informations (gauche)-->
+        <div class="content">
+            <div class="title">
+                <h3>Bienvenue sur mon Portfolio</h3>
+            </div>
+            <div class="name">
+                <h1>Dierickx Simon</h1>
+            </div>
+            <div class="description">
+                <p>Développeur web passionné par la création d'expériences utilisateur intuitives et engageantes.</p>
+            </div>
+            <div class="icons">
+                <a href="" class="iconst" style="--color:#1877f2;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="" class="iconst" style="--color:#607D8B;"><i class="fa-brands fa-discord"></i></a>
+                <a href="" class="iconst" style="--color:#e4405f;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="" class="iconst" style="--color:#0077b5;"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        
+        <!--Partie avec une photo de profile (droite)-->
+        <div class="picture">
+            <img src="img/photo-profil-tempo.webp" alt="Photo de profil" class="animated">
+        </div>
+    </div>
+
+    <!--SECTION # 2-->
+<!--Partie avec les différents projets-->
+<div class="projects">
+    <h2 class="projects-title">Mes Projets</h2>
+    <div class="projects-container">
+        
+        <!-- Projet 1: OpenClassroom -->
+        <div class="project-accordion">
+            <div class="project-header" onclick="toggleProject(this)">
+                <h3 class="project-title">OpenClassroom</h3>
+                <span class="project-toggle">▼</span>
+            </div>
+            <div class="project-content">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="img/openclassroom.jpg" alt="Projet OpenClassroom">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-description">
+                            Formation et projets réalisés sur OpenClassroom. Développement de compétences en web development à travers différents parcours et exercices pratiques.
+                        </p>
+                        <div class="progress-container">
+                            <span class="progress-label">Progression du projet</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="100"></div>
+                            </div>
+                            <div class="progress-percentage">0%</div>
+                        </div>
+                        <a href="#projects" class="project-link">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 2: Job chez Arsalis -->
+        <div class="project-accordion">
+            <div class="project-header" onclick="toggleProject(this)">
+                <h3 class="project-title">Job chez Arsalis</h3>
+                <span class="project-toggle">▼</span>
+            </div>
+            <div class="project-content">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="img/arsalis.jpg" alt="Projet Arsalis">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-description">
+                            Expérience professionnelle chez Arsalis. Développement d'applications et contribution à des projets clients avec des technologies modernes.
+                        </p>
+                        <div class="progress-container">
+                            <span class="progress-label">Progression du projet</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="100"></div>
+                            </div>
+                            <div class="progress-percentage">0%</div>
+                        </div>
+                        <a href="#projects" class="project-link">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 3: Tennis -->
+        <div class="project-accordion">
+            <div class="project-header" onclick="toggleProject(this)">
+                <h3 class="project-title">Tennis</h3>
+                <span class="project-toggle">▼</span>
+            </div>
+            <div class="project-content">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="img/tennis.jpg" alt="Projet Tennis">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-description">
+                            Application web pour la gestion de tournois de tennis. Interface utilisateur moderne avec système de gestion des matchs et classements.
+                        </p>
+                        <div class="progress-container">
+                            <span class="progress-label">Progression du projet</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="100"></div>
+                            </div>
+                            <div class="progress-percentage">0%</div>
+                        </div>
+                        <a href="#projects" class="project-link">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 4: Activité EPHEC -->
+        <div class="project-accordion">
+            <div class="project-header" onclick="toggleProject(this)">
+                <h3 class="project-title">Activité EPHEC</h3>
+                <span class="project-toggle">▼</span>
+            </div>
+            <div class="project-content">
+                <div class="project-inner">
+                    <div class="project-image">
+                        <img src="img/ephec.jpg" alt="Projet EPHEC">
+                    </div>
+                    <div class="project-info">
+                        <p class="project-description">
+                            Projets académiques réalisés à l'EPHEC. Développement d'applications web et mobile dans le cadre de formations en informatique.
+                        </p>
+                        <div class="progress-container">
+                            <span class="progress-label">Progression du projet</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="5"></div>
+                            </div>
+                            <div class="progress-percentage">0%</div>
+                        </div>
+                        <a href="#projects" class="project-link">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+    <!--SECTION # 3-->
+    <!--Section des compétences-->
+    <div class="skills-section">
+        <h2 class="skills-title">Mes Compétences</h2>
+        <!--Wrapper avec les langages que je maitrise-->
+        <div class="wrapper">
+            <div class="item item1">
+                <img src="img/logo_js.webp" alt="Logo Javascript">
+                <h5>Javascript</h5>
+            </div>
+            <div class="item item2">
+                <img src="img/HTML5_Logo_128.webp" alt="Logo html">
+                <h5>HTML</h5>
+            </div>
+            <div class="item item3">
+                <img src="img/logo_css.webp" alt="Logo CSS">
+                <h5>CSS</h5>
+            </div>
+            <div class="item item4">
+                <img src="img/python-logo-0.webp" alt="Logo Python">
+                <h5>Python</h5>
+            </div>
+        </div>
+    </div>
+
+    <!--SECTION # 4-->
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Développeur web passionné par la création d'expériences utilisateur modernes et intuitives.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <p><a href="#home">Accueil</a></p>
+                <p><a href="#about">À propos</a></p>
+                <p><a href="#projects">Projets</a></p>
+                <p><a href="#contact">Contact</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Me suivre</h3>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <a href="mailto:dierickxsimon198@gmail.com">📧 dierickxsimon198@gmail.com</a><br>
+                <a href="tel:+32499500333">📱 +32 499 50 03 33</a>
+                <p>📍 Belgique</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dierickx Simon. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
