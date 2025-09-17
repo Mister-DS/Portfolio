@@ -1,0 +1,605 @@
+body{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #364d27;
+    color: #172310;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: #efefee;
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a {
+    position: relative;
+    cursor: pointer;
+    color: #efefee;
+    font-size: 28px;
+    padding: 0.4rem 0.8rem;
+    transition: color 0.25s;
+    text-decoration: none;
+}
+
+nav a::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: white;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav a:hover::after {
+    scale: 1 1;
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+}
+
+/* Section OpenClassroom*/
+
+.OpenClassroom {
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: grid;
+
+    grid-template-columns: 1fr;
+    
+    margin-top: 10rem;    
+    margin-bottom: 10rem; 
+    
+    gap: 5rem; 
+    
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+
+@media (min-width: 768px) {
+    .OpenClassroom {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+}
+
+.OpenClassroom h1 {
+    grid-column: 1 / -1; 
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #efefee;
+}
+
+.OpenClassroom .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.OpenClassroom .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.OpenClassroom .title h2 {
+    font-size: 1.5rem;
+    color: #8ab863;
+    margin: 0;
+}
+
+.OpenClassroom .project-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #8ab863;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.OpenClassroom .project-image:hover {
+    transform: rotate(3deg) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.OpenClassroom .description {
+    text-align: center;
+}
+
+.OpenClassroom .description p {
+    color: #efefee;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+.OpenClassroom .separator {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8ab863, transparent);
+    margin: 1rem 0;
+}
+
+.OpenClassroom .time {
+    color: #8ab863;
+    font-weight: 600;
+    font-style: italic;
+}
+
+@media (max-width: 767px) {
+    .OpenClassroom {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .OpenClassroom h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Section Arsalis */
+
+.Arsalis{
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: grid;
+
+    grid-template-columns: 1fr;
+    
+    margin-top: 6rem;    
+    margin-bottom: 10rem; 
+    
+    gap: 5rem; 
+    
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+    .Arsalis {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+}
+
+.Arsalis h1 {
+    grid-column: 1 / -1; 
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #efefee;
+}
+
+.Arsalis .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.Arsalis .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Arsalis .title h2 {
+    font-size: 1.5rem;
+    color: #8ab863;
+    margin: 0;
+}
+
+.Arsalis .project-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #8ab863;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.Arsalis .project-image:hover {
+    transform: rotate(3deg) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Arsalis .description {
+    text-align: center;
+}
+
+.Arsalis .description p {
+    color: #efefee;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+.Arsalis .separator {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8ab863, transparent);
+    margin: 1rem 0;
+}
+
+.Arsalis .time {
+    color: #8ab863;
+    font-weight: 600;
+    font-style: italic;
+}
+
+@media (max-width: 767px) {
+    .Arsalis {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .Arsalis h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Section Tennis */
+
+.Tennis{
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: grid;
+
+    grid-template-columns: 1fr;
+    
+    margin-top: 6rem;    
+    margin-bottom: 10rem; 
+    
+    gap: 5rem; 
+    
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+    .Tennis {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+}
+
+.Tennis h1 {
+    grid-column: 1 / -1; 
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #efefee;
+}
+
+.Tennis .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.Tennis .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Tennis .title h2 {
+    font-size: 1.5rem;
+    color: #8ab863;
+    margin: 0;
+}
+
+.Tennis .project-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #8ab863;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.Tennis .project-image:hover {
+    transform: rotate(3deg) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Tennis .description {
+    text-align: center;
+}
+
+.Tennis .description p {
+    color: #efefee;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+.Tennis .separator {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8ab863, transparent);
+    margin: 1rem 0;
+}
+
+.Tennis .time {
+    color: #8ab863;
+    font-weight: 600;
+    font-style: italic;
+}
+
+@media (max-width: 767px) {
+    .Tennis {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .Tennis h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Section Ephec */
+
+.Ephec {
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: grid;
+
+    grid-template-columns: 1fr;
+    
+    margin-top: 6rem;    
+    margin-bottom: 10rem; 
+    
+    gap: 5rem; 
+    
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+
+@media (min-width: 768px) {
+    .Ephec {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+    }
+}
+
+.Ephec h1 {
+    grid-column: 1 / -1; 
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #efefee;
+}
+
+.Ephec .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.Ephec .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Ephec .title h2 {
+    font-size: 1.5rem;
+    color: #8ab863;
+    margin: 0;
+}
+
+.Ephec .project-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #8ab863;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.Ephec .project-image:hover {
+    transform: rotate(3deg) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Ephec .description {
+    text-align: center;
+}
+
+.Ephec .description p {
+    color: #efefee;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+.Ephec .separator {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8ab863, transparent);
+    margin: 1rem 0;
+}
+
+.Ephec .time {
+    color: #8ab863;
+    font-weight: 600;
+    font-style: italic;
+}
+
+@media (max-width: 767px) {
+    .Ephec {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .Ephec h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #2a3d1f 0%, #1e2b16 100%);
+    color: #efefee;
+    padding: 3rem 0 1.5rem 0;
+    margin-top: 4rem;
+    border-top: 2px solid rgba(138, 184, 99, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8ab863, transparent);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: #8ab863;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px rgba(138, 184, 99, 0.3);
+}
+
+.footer-section p, .footer-section a {
+    color: #efefee;
+    line-height: 1.6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #8ab863;
+    text-shadow: 0 0 5px rgba(138, 184, 99, 0.5);
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    width: 50px;
+    height: 50px;
+    background: rgba(138, 184, 99, 0.1);
+    border: 2px solid rgba(138, 184, 99, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #8ab863;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(138, 184, 99, 0.4);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(138, 184, 99, 0.2);
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    footer {
+        padding: 2rem 0 1rem 0;
+    }
+}
+
+/* Effet de brillance qui passe */
+.item::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, transparent, rgba(138, 184, 99, 0.1), transparent);
+    border-radius: 22px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item:hover::before {
+    opacity: 1;
+}
