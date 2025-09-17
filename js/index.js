@@ -1,21 +1,39 @@
 function toggleProject(header) {
     const accordion = header.parentElement;
+    const content = accordion.querySelector('.project-content');
     const isActive = accordion.classList.contains('active');
     
+    // Ferme tous les autres accordéons
     document.querySelectorAll('.project-accordion.active').forEach(acc => {
-        acc.classList.remove('active');
+        if (acc !== accordion) {
+            acc.classList.remove('active');
+            const otherContent = acc.querySelector('.project-content');
+            otherContent.style.maxHeight = '0';
+        }
     });
     
-    if (!isActive) {
+    if (isActive) {
+        // Fermer l'accordéon actuel
+        accordion.classList.remove('active');
+        content.style.maxHeight = '0';
+    } else {
+        // Ouvrir l'accordéon actuel
         accordion.classList.add('active');
         
-        const progressFill = accordion.querySelector('.progress-fill');
-        const progressPercentage = accordion.querySelector('.progress-percentage');
-        const targetProgress = parseInt(progressFill.dataset.progress);
+        // Calculer la hauteur réelle du contenu
+        const realHeight = content.scrollHeight;
+        content.style.maxHeight = realHeight + 'px';
+        
+        // Animation de TOUTES les barres de progression dans cet accordéon
+        const progressFills = accordion.querySelectorAll('.progress-fill');
+        const progressPercentages = accordion.querySelectorAll('.progress-percentage');
         
         setTimeout(() => {
-            progressFill.style.width = targetProgress + '%';
-            animatePercentage(progressPercentage, targetProgress);
+            progressFills.forEach((progressFill, index) => {
+                const targetProgress = parseInt(progressFill.dataset.progress);
+                progressFill.style.width = targetProgress + '%';
+                animatePercentage(progressPercentages[index], targetProgress);
+            });
         }, 300);
     }
 }

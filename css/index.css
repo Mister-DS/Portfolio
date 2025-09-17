@@ -406,7 +406,7 @@ a.iconst:hover {
     transform: rotate(180deg);
 }
 
-/* Contenu de l'accordéon */
+/* Contenu de l'accordéon - VERSION CORRIGÉE */
 .project-content {
     max-height: 0;
     overflow: hidden;
@@ -414,8 +414,9 @@ a.iconst:hover {
     background: rgba(0, 0, 0, 0.1);
 }
 
+/* Plus de limitation fixe - la hauteur sera calculée par JavaScript */
 .project-accordion.active .project-content {
-    max-height: 400px;
+    /* La hauteur sera définie dynamiquement par le JS */
 }
 
 .project-inner {
@@ -576,8 +577,6 @@ a.iconst:hover {
     font-weight: bold;
     text-shadow: 0 0 10px rgba(138, 184, 99, 0.3);
 }
-
-
 
 /* Section des compétences */
 .skills-section {
@@ -816,8 +815,6 @@ footer::before {
         padding: 2rem 0 1rem 0;
     }
 }
-
-
 
 /* Effet de brillance qui passe */
 .item::before {
