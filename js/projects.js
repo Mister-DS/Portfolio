@@ -1,13 +1,12 @@
 // Gestion de la lightbox pour afficher les images en grand
 document.addEventListener('DOMContentLoaded', function() {
-    // Récupération des éléments
+    // Récupération des éléments de la lightbox
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.getElementById('lightbox-caption');
     const closeBtn = document.querySelector('.lightbox-close');
     const projectImages = document.querySelectorAll('.project-image');
 
-    // Ajouter un écouteur de clic sur chaque image
+    // Ajouter un écouteur de clic sur chaque image pour ouvrir la lightbox
     projectImages.forEach(function(img) {
         img.addEventListener('click', function() {
             openLightbox(this);
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function openLightbox(imgElement) {
         lightbox.classList.add('active');
         lightboxImg.src = imgElement.src;
-        lightboxCaption.textContent = imgElement.alt;
         document.body.style.overflow = 'hidden'; // Empêcher le scroll
     }
 
@@ -31,9 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fermer avec le bouton X
     closeBtn.addEventListener('click', closeLightbox);
 
-    // Fermer en cliquant en dehors de l'image
+    // Fermer en cliquant en dehors de l'image (sur l'overlay lightbox)
     lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox || e.target === lightboxImg) {
+        if (e.target === lightbox) {
             closeLightbox();
         }
     });
@@ -44,4 +42,36 @@ document.addEventListener('DOMContentLoaded', function() {
             closeLightbox();
         }
     });
+
+    // --- Début du carrousel jQuery ---
+
+    // Déclaration des variables du carrousel
+    var carousel = $(".carousel"),
+        items = $(".item"), // Sélectionne les cartes .item
+        currdeg  = 0;
+
+    // Fonction de rotation
+    function rotate(direction){
+        if(direction=="n"){
+            currdeg = currdeg - 120; // 120 degrés pour 3 images
+        } else if(direction=="p"){
+            currdeg = currdeg + 120; // 120 degrés pour 3 images
+        }
+
+        // Applique la rotation au carrousel (le "manège")
+        carousel.css({
+            "transform": "rotateY("+currdeg+"deg)"
+        });
+
+        items.css({
+            "transform": "rotateY("+(-currdeg)+"deg)"
+        });
+    }
+
+    // --- Défilement automatique toutes les 5 secondes ---
+    let autoRotate = setInterval(function() {
+        rotate("n"); // Fait avancer le carrousel
+    }, 5000); // 5000 ms = 5 secondes
+
+
 });

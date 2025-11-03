@@ -6,34 +6,43 @@
     <title>Contact - Dierickx Simon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/contact.css">
+    <script src="js/theme.js" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+        })();
+    </script>
+
     <header>
         <h1 class="logo">Portfolio</h1>
         <nav class="navbar">
-            <a href="/Portfolio/index.html">Home</a>
-            <a href="#">About</a>
-            <a href="/Portfolio/projects.html">Projects</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <a href="#" id="theme-toggle">
+            <i class="fa-solid fa-sun"></i>
+        </a>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <h1>Contactez-moi</h1>
         <p>N'hésitez pas à me contacter pour discuter de vos projets ou pour toute question. Je serais ravi de collaborer avec vous !</p>
     </section>
 
-    <!-- Profile Image -->
     <section class="profile-section">
-        <img src="/Portfolio/img/photo-profil-tempo.webp" alt="Photo de profil" class="profile-image">
+        <img src="img/photo-profil-tempo.webp" alt="Photo de profil" class="profile-image">
     </section>
 
-    <!-- Contact Cards -->
     <section class="contact-section">
         <div class="contact-container">
-            <!-- Email -->
             <div class="contact-card">
                 <div class="contact-icon">
                     <i class="fas fa-envelope"></i>
@@ -45,7 +54,6 @@
                 </div>
             </div>
 
-            <!-- Téléphone -->
             <div class="contact-card">
                 <div class="contact-icon">
                     <i class="fas fa-phone"></i>
@@ -57,24 +65,23 @@
                 </div>
             </div>
 
-            <!-- Localisation -->
             <div class="contact-card">
                 <div class="contact-icon">
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div class="contact-info">
                     <h3>Localisation</h3>
-                    <p>Walhain</p>
-                    <a href="https://www.google.com/maps/place/Walhain" class="contact-btn">Voir sur la carte</a>
+                    <p>Walhain, Belgique</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Walhain,Belgium" class="contact-btn" target="_blank" rel="noopener noreferrer">Voir sur la carte</a>
                 </div>
             </div>
+        </div>
     </section>
 
-    <!-- Contact Form -->
-      <section class="form-section">
+    <section class="form-section">
         <div class="form-container">
             <h2>Envoyez-moi un message</h2>
-            <form class="contact-form" action="mailto:dierickxsimon198@gmail.com" method="post" enctype="text/plain">
+            <form class="contact-form" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder=" " required>
                     <label for="name">Votre nom</label>
@@ -103,7 +110,6 @@
         </div>
     </section>
 
-    <!-- Social Links -->
     <section class="social-section">
         <h3>Retrouvez-moi aussi sur</h3>
         <div class="social-links">
@@ -122,7 +128,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -157,7 +162,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 Dierickx Simon. Tous droits réservés.</p>
+            <p>© 2025 Dierickx Simon. Tous droits réservés.</p>
         </div>
     </footer>
 </body>

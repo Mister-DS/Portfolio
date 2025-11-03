@@ -1,9 +1,9 @@
+// Fonction originale pour l'accordéon
 function toggleProject(header) {
     const accordion = header.parentElement;
     const content = accordion.querySelector('.project-content');
     const isActive = accordion.classList.contains('active');
     
-    // Ferme tous les autres accordéons
     document.querySelectorAll('.project-accordion.active').forEach(acc => {
         if (acc !== accordion) {
             acc.classList.remove('active');
@@ -13,18 +13,13 @@ function toggleProject(header) {
     });
     
     if (isActive) {
-        // Fermer l'accordéon actuel
         accordion.classList.remove('active');
         content.style.maxHeight = '0';
     } else {
-        // Ouvrir l'accordéon actuel
         accordion.classList.add('active');
-        
-        // Calculer la hauteur réelle du contenu
         const realHeight = content.scrollHeight;
         content.style.maxHeight = realHeight + 'px';
         
-        // Animation de TOUTES les barres de progression dans cet accordéon
         const progressFills = accordion.querySelectorAll('.progress-fill');
         const progressPercentages = accordion.querySelectorAll('.progress-percentage');
         
@@ -38,20 +33,25 @@ function toggleProject(header) {
     }
 }
 
+// Fonction originale pour animer le pourcentage
 function animatePercentage(element, target) {
     let current = 0;
-    const increment = target / 100;
+    const duration = 2000;
+    const stepTime = 20;
+    const totalSteps = duration / stepTime;
+    const stepIncrement = target / totalSteps;
     
     const timer = setInterval(() => {
-        current += increment;
+        current += stepIncrement;
         if (current >= target) {
             current = target;
             clearInterval(timer);
         }
         element.textContent = Math.round(current) + '%';
-    }, 20);
+    }, stepTime);
 }
 
+// Écouteur d'événement 'load' original
 window.addEventListener('load', () => {
     const accordions = document.querySelectorAll('.project-accordion');
     accordions.forEach(accordion => {
@@ -59,6 +59,7 @@ window.addEventListener('load', () => {
     });
 });
 
+// Options IntersectionObserver originales
 const sectionObserverOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -86,7 +87,10 @@ const projectObserver = new IntersectionObserver((entries) => {
     });
 }, projectObserverOptions);
 
+// Écouteur d'événement DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // Code original d'observation
     const sections = document.querySelectorAll('.projects, .skills-section, footer');
     sections.forEach(section => {
         sectionObserver.observe(section);
@@ -103,4 +107,5 @@ document.addEventListener('DOMContentLoaded', () => {
             heroSection.classList.add('is-visible');
         }
     }, 100);
+
 });

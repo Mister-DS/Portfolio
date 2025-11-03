@@ -6,9 +6,19 @@
     <title>À propos - Dierickx Simon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/about.css">
+    <script src="js/theme.js" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+        })();
+    </script>
+
     <header>
         <h1 class="logo">Portfolio</h1>
         <nav class="navbar">
@@ -17,9 +27,11 @@
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <a href="#" id="theme-toggle">
+            <i class="fa-solid fa-sun"></i>
+        </a>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>À propos de moi</h1>
@@ -27,7 +39,6 @@
         </div>
     </section>
 
-    <!-- Profile Section -->
     <section class="profile-section">
         <div class="profile-container">
             <div class="profile-image">
@@ -60,7 +71,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section class="skills-section">
         <h2>Mes Compétences</h2>
         <div class="skills-container">
@@ -142,7 +152,6 @@
         </div>
     </section>
 
-    <!-- Experience Timeline -->
     <section class="timeline-section">
         <h2>Mon Parcours</h2>
         <div class="timeline">
@@ -192,7 +201,6 @@
         </div>
     </section>
 
-    <!-- Interests Section -->
     <section class="interests-section">
         <h2>Mes Centres d'Intérêt</h2>
         <div class="interests-grid">
@@ -230,7 +238,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">

@@ -5,25 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/projects.js" defer></script>
+    <script src="js/theme.js" defer></script>
 
     <title>Projets</title>
 </head>
 
 <body>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+        })();
+    </script>
+
     <header>
         <h1 class="logo">Portfolio</h1>
         <nav class="navbar">
-            <a href="/Portfolio/index.html">Home</a>
-            <a href="#">About</a>
-            <a href="/Portfolio/projects.html">Projects</a>
-            <a href="#">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
         </nav>
+        <a href="#" id="theme-toggle">
+            <i class="fa-solid fa-sun"></i>
+        </a>
     </header>
 
-    <!-- OpenClassroom Section -->
-    <section class="OpenClassroom">
+    <section class="OpenClassroom project-section">
         <h1>OpenClassroom</h1>
         <div class="content">
             <div class="title">
@@ -31,7 +51,8 @@
                 <img src="img/formation_js.png" alt="Formation JavaScript" class="project-image">
             </div>
             <div class="description">
-                <p>Le but de cette formation était de perfectionner mes lacunes en JavaScript et de pouvoir continuer pleinement dans les projets et pourquoi pas mon métier future.</p>
+                <p>Le but de cette formation était de perfectionner mes lacunes en JavaScript et de pouvoir continuer
+                    pleinement dans les projets et pourquoi pas mon métier future.</p>
                 <hr class="separator">
                 <p class="time">Durée : 15 heures</p>
             </div>
@@ -42,15 +63,17 @@
                 <img src="img/formation_python.png" alt="Formation Python" class="project-image">
             </div>
             <div class="description">
-                <p>Le but de cette formation était d'apprendre et de maitriser les bases du langages python. Cette formation m'a permis de me perfectionner dans celui-ci et de pouvoir rendre le projet du Q1 en BAC 2 (gestion de restaurant)</p>
+                <p>Le but de cette formation était d'apprendre et de maitriser les bases du langages python. Cette
+                    formation m'a permis de me perfectionner dans celui-ci et de pouvoir rendre le projet du Q1 en BAC 2
+                    (gestion de restaurant)</p>
                 <hr class="separator">
                 <p class="time">Durée : 6 heures</p>
             </div>
         </div>
-    </section><hr>
+    </section>
+    <hr>
 
-    <!-- Arsalis Section -->
-    <section class="Arsalis">
+    <section class="Arsalis project-section">
         <h1>Arsalis</h1>
         <div class="content">
             <div class="title">
@@ -70,7 +93,8 @@
                 <img src="img/IMG_6532.jpg" alt="Soudure 1" class="project-image">
             </div>
             <div class="description">
-                <p>Travaux de soudure sur des câbles électroniques. Cette expérience m'a permis d'acquérir des compétences techniques précises en électronique.</p>
+                <p>Travaux de soudure sur des câbles électroniques. Cette expérience m'a permis d'acquérir des
+                    compétences techniques précises en électronique.</p>
                 <hr class="separator">
                 <p class="time">Durée : 450 heures</p>
             </div>
@@ -82,31 +106,33 @@
                 <img src="img/IMG_6533.jpg" alt="Soudure 2" class="project-image">
             </div>
             <div class="description">
-                <p>Poursuite des travaux de soudure et manipulation de composants électroniques pour la réparation et l'assemblage d'équipements.</p>
+                <p>Poursuite des travaux de soudure et manipulation de composants électroniques pour la réparation et
+                    l'assemblage d'équipements.</p>
                 <hr class="separator">
                 <p class="time">Durée : 450 heures</p>
             </div>
         </div>
-    </section><hr>
+    </section>
+    <hr>
 
-    <!-- Tennis Section -->
-    <section class="Tennis">
+    <section class="Tennis project-section">
         <h1>Tennis Club</h1>
         <div class="content">
             <div class="title">
                 <h2>Sport</h2>
-                <img src="/Portfolio/img/tennis.png" alt="OpenClassroom Logo" class="project-image">
+                <img src="img/tennis.png" alt="Logo Tennis" class="project-image">
             </div>
             <div class="description">
-                <p>Depuis tout petit (mes 5 ans) je pratique ce sport pour suivre mon père dans cette discipline que j'aime pratiquer avec mes amis, ma famille et autres. Je possède donc un classement de tennis.</p>
+                <p>Depuis tout petit (mes 5 ans) je pratique ce sport pour suivre mon père dans cette discipline que
+                    j'aime pratiquer avec mes amis, ma famille et autres. Je possède donc un classement de tennis.</p>
                 <hr class="separator">
                 <p class="time">Durée : 15 années</p>
             </div>
         </div>
-    </section><hr>
+    </section>
+    <hr>
 
-    <!-- Ephec Section -->
-    <section class="Ephec">
+    <section class="Ephec project-section">
         <h1>Ephec</h1>
         <div class="content">
             <div class="title">
@@ -114,7 +140,8 @@
                 <img src="img/team_hacka.png" alt="Équipe Hackathon" class="project-image">
             </div>
             <div class="description">
-                <p>Participation au hackathon de l'EPHEC. Travail en équipe sur un projet innovant dans un temps limité.</p>
+                <p>Participation au hackathon de l'EPHEC. Travail en équipe sur un projet innovant dans un temps limité.
+                </p>
                 <hr class="separator">
                 <p class="time">Durée : 48 heures</p>
             </div>
@@ -126,7 +153,8 @@
                 <img src="img/message1_hacka.png" alt="Messages Hackathon" class="project-image">
             </div>
             <div class="description">
-                <p>Échanges et collaboration durant le hackathon. Communication et coordination de l'équipe pour mener à bien le projet.</p>
+                <p>Échanges et collaboration durant le hackathon. Communication et coordination de l'équipe pour mener à
+                    bien le projet.</p>
                 <hr class="separator">
                 <p class="time">Durée : 48 heures</p>
             </div>
@@ -137,15 +165,16 @@
                 <img src="img/hackat_pc.jpg" alt="Pc démonté" class="project-image">
             </div>
             <div class="description">
-                <p>Utilisation et démontage d'un vieux HP pour préparer via une vielle machine à écrire un Apple II fonctionnel.</p>
+                <p>Utilisation et démontage d'un vieux HP pour préparer via une vielle machine à écrire un Apple II
+                    fonctionnel.</p>
                 <hr class="separator">
                 <p class="time">Durée : 48 heures</p>
             </div>
         </div>
-    </section><hr>
+    </section>
+    <hr>
 
-    <!-- Section Cours de Math -->
-    <section class="Math">
+    <section class="Math project-section">
         <h1>Cours de Mathématiques</h1>
         <div class="content">
             <div class="title">
@@ -153,14 +182,55 @@
                 <img src="img/math_rattrapage.png" alt="Cours de Math" class="project-image">
             </div>
             <div class="description">
-                <p>Cours de rattrapage en mathématiques pour renforcer mes compétences et combler mes lacunes dans certains domaines clés.</p>
+                <p>Cours de rattrapage en mathématiques pour renforcer mes compétences et combler mes lacunes dans
+                    certains domaines clés.</p>
                 <hr class="separator">
                 <p class="time">Durée : 10 heures</p>
             </div>
         </div>
-    </section><hr>
+    </section>
+    <hr>
 
-    <!-- Section Total des heures -->
+    <section class="carousel-wrapper">
+        <h1 class="carousel-title">Projets d'École (Carrousel)</h1>
+        <div class="container">
+            <div class="carousel">
+                <div class="carousel-item-container a">
+                    <div class="item">
+                        <h3>Lares</h3>
+                        <img src="img/lares.png" alt="Projet Lares" class="project-image">
+                        <div class="description">
+                            <p>Projet qui à pour but de créer une plateforme de gestion de serrrures</p>
+                            <p class="date">2025 - 2026</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item-container b">
+                    <div class="item">
+                        <h3>Gestion d'un restaurant</h3>
+                        <img src="img/restaurant.png" alt="Projet Restaurant" class="project-image">
+                        <div class="description">
+                            <p>Projet qui à pour but de créer une plateforme de gestion de restaurant (Python / Shell)</p>
+                            <p class="date">2024 - 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item-container c">
+                    <div class="item">
+                        <h3>Gestion Grand Prix F1</h3>
+                        <img src="img/restaurant.png" alt="Projet Restaurant" class="project-image">
+                        <div class="description">
+                            <p>Projet qui à pour but de créer une plateforme de gestion d'un weekend de grand prix en C</p>
+                            <p class="date">2024 - 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
     <section class="TotalHeures">
         <div class="total-container">
             <h1>Bilan Total</h1>
@@ -205,21 +275,19 @@
         </div>
     </section>
 
-    <!-- Lightbox pour afficher les images en grand -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
         <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
 
-    <!--Footer-->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>À propos</h3>
                 <p>Développeur web passionné par la création d'expériences utilisateur modernes et intuitives.</p>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Navigation</h3>
                 <p><a href="index.html">Accueil</a></p>
@@ -237,7 +305,7 @@
                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Contact</h3>
                 <a href="mailto:dierickxsimon198@gmail.com">📧 dierickxsimon198@gmail.com</a><br>
@@ -245,7 +313,7 @@
                 <p>📍 Belgique</p>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>&copy; 2025 Dierickx Simon. Tous droits réservés.</p>
         </div>

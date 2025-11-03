@@ -6,10 +6,13 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #364d27 0%, #2a3d1f 100%);
+    /* MISE À JOUR: Fond noir */
+    background-color: #000000;
     color: #efefee;
     min-height: 100vh;
     overflow-x: hidden;
+    /* NOUVEAU: Transition */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Navigation */
@@ -21,6 +24,10 @@ header {
     width: 100%;
     height: 80px;
     box-sizing: border-box;
+    /* NOUVEAU: Position relative */
+    position: relative;
+    /* NOUVEAU: Transition */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .logo {
@@ -28,6 +35,7 @@ header {
     font-size: 28px;
     margin: 0;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav {
@@ -43,7 +51,7 @@ nav a {
     position: relative;
     cursor: pointer;
     color: #efefee;
-    font-size: 28px;
+    font-size: 28px; /* Note: C'est 28px ici, mais 18px sur la page 'about'. À vérifier si c'est voulu. */
     padding: 0.4rem 0.8rem;
     transition: color 0.25s;
     text-decoration: none;
@@ -73,11 +81,33 @@ nav a:hover::after {
     text-align: center;
 }
 
+/* NOUVEAU: Style pour le bouton lune/soleil */
+#theme-toggle {
+    font-size: 1.5rem;
+    color: #efefee;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#theme-toggle:hover {
+    color: #8ab863;
+    transform: scale(1.1) rotate(15deg);
+}
+
+
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 6rem 2rem 4rem;
     position: relative;
+    transition: background-color 0.3s ease;
 }
 
 .hero::before {
@@ -107,6 +137,7 @@ nav a:hover::after {
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
+    transition: color 0.3s ease;
 }
 
 /* Profile Section */
@@ -149,7 +180,8 @@ nav a:hover::after {
 }
 
 .contact-card {
-    background: rgba(0, 0, 0, 0.2);
+    /* MISE À JOUR: Fond gris subtil */
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(138, 184, 99, 0.3);
     border-radius: 15px;
     padding: 2rem;
@@ -203,6 +235,7 @@ nav a:hover::after {
     color: #efefee;
     margin-bottom: 1rem;
     opacity: 0.9;
+    transition: color 0.3s ease;
 }
 
 .contact-btn {
@@ -231,11 +264,13 @@ nav a:hover::after {
 }
 
 .form-container {
-    background: rgba(0, 0, 0, 0.2);
+    /* MISE À JOUR: Fond gris subtil */
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(138, 184, 99, 0.3);
     border-radius: 20px;
     padding: 3rem;
     backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .form-container h2 {
@@ -254,7 +289,8 @@ nav a:hover::after {
 .form-group textarea {
     width: 100%;
     padding: 1rem;
-    background: rgba(0, 0, 0, 0.3);
+    /* MISE À JOUR: Fond gris */
+    background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(138, 184, 99, 0.3);
     border-radius: 10px;
     color: #efefee;
@@ -286,8 +322,10 @@ nav a:hover::after {
     left: 0.5rem;
     font-size: 0.9rem;
     color: #8ab863;
-    background: #364d27;
+    /* MISE À JOUR: Fond pour le label */
+    background: #000000; 
     padding: 0 0.5rem;
+    transition: background-color 0.3s ease;
 }
 
 .submit-btn {
@@ -318,6 +356,7 @@ nav a:hover::after {
     padding: 4rem 2rem;
     border-top: 1px solid rgba(138, 184, 99, 0.2);
     margin-top: 4rem;
+    transition: border-color 0.3s ease;
 }
 
 .social-section h3 {
@@ -354,22 +393,100 @@ nav a:hover::after {
     box-shadow: 0 5px 20px rgba(138, 184, 99, 0.4);
 }
 
+/* Footer (Utilise les mêmes styles que about.css) */
+footer {
+    background: #050505;
+    color: #efefee;
+    padding: 3rem 0 1.5rem 0;
+    margin-top: 4rem;
+    border-top: 2px solid rgba(138, 184, 99, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: #8ab863;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section a {
+    color: rgba(239, 239, 238, 0.8);
+    line-height: 1.8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #8ab863;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    font-size: 1.5rem;
+    color: #8ab863;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+    color: #b8d68c;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(138, 184, 99, 0.2);
+    color: rgba(239, 239, 238, 0.6);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        height: auto;
-        padding: 1rem;
-        gap: 1rem;
+        /* Gardons la nav en haut sur mobile, mais ajustons */
+        flex-direction: row;
+        height: 80px;
+        padding: 0 1rem;
     }
 
     nav {
-        gap: 1rem;
+        gap: 0.5rem;
+        position: static; /* Annuler la position absolue */
+        transform: none;  /* Annuler la transformation */
+        left: auto;
     }
 
     nav a {
-        font-size: 16px;
-        padding: 0.3rem 0.8rem;
+        font-size: 16px; /* Plus petit pour mobile */
+        padding: 0.2rem 0.4rem;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    /* Masquer le bouton de thème sur les très petits écrans si nécessaire, ou le laisser */
+    #theme-toggle {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
     }
 
     .hero {
@@ -394,4 +511,144 @@ nav a:hover::after {
         height: 50px;
         font-size: 1.2rem;
     }
+}
+
+
+/*
+=================================================
+NOUVEAU: STYLES DU MODE CLAIR (LIGHT MODE)
+=================================================
+*/
+
+body.light-mode {
+    background-color: #FFFFFF;
+    color: #333333;
+}
+
+body.light-mode header {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode .logo {
+    color: #000000;
+}
+
+body.light-mode nav a {
+    color: #000000;
+}
+
+body.light-mode nav a::after {
+    background: #000000;
+}
+
+body.light-mode nav a:hover {
+    color: #FFFFFF;
+}
+
+body.light-mode #theme-toggle {
+    color: #000000;
+}
+
+body.light-mode #theme-toggle:hover {
+    color: #364d27;
+}
+
+body.light-mode .hero p {
+    color: #333333;
+}
+
+body.light-mode .profile-image {
+    box-shadow: 
+        0 0 20px rgba(54, 77, 39, 0.3),
+        0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .profile-image:hover {
+    box-shadow: 
+        0 0 30px rgba(54, 77, 39, 0.5),
+        0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .contact-card {
+    background: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .contact-card:hover {
+    border-color: #8ab863;
+    box-shadow: 0 10px 30px rgba(54, 77, 39, 0.2);
+}
+
+body.light-mode .contact-info p {
+    color: #333333;
+}
+
+body.light-mode .form-container {
+    background: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+    background: #f0f0f0;
+    border-color: rgba(0, 0, 0, 0.15);
+    color: #000000;
+}
+
+body.light-mode .form-group input:focus,
+body.light-mode .form-group textarea:focus {
+    border-color: #8ab863;
+    box-shadow: 0 0 10px rgba(54, 77, 39, 0.3);
+}
+
+body.light-mode .form-group label {
+    color: #777777;
+}
+
+body.light-mode .form-group input:focus + label,
+body.light-mode .form-group input:not(:placeholder-shown) + label,
+body.light-mode .form-group textarea:focus + label,
+body.light-mode .form-group textarea:not(:placeholder-shown) + label {
+    background: #FFFFFF; /* Fond blanc pour le label */
+}
+
+body.light-mode .social-section {
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .social-link {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .social-link:hover {
+    background: var(--color);
+    color: #000;
+}
+
+body.light-mode footer {
+    background: #eeeeee;
+    color: #333333;
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .footer-section p,
+body.light-mode .footer-section a {
+    color: #333333;
+}
+
+body.light-mode .footer-bottom {
+    color: #555555;
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+    border: 2px solid #f1f1f1;
 }

@@ -4,24 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Dierickx Simon - HE202205</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" ... />
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js"></script>
+    
+    <script src="js/index.js" defer></script>
+    
+    <script src="js/theme.js" defer></script>
 </head>
 <body>
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+        })();
+    </script>
+
     <header>
         <h1 class="logo">Portfolio</h1>
         <nav class="navbar">
-                <a href="#">Home</a>
-                <a href="/about.html">About</a>
-                <a href="/projects.html">Projects</a>
-                <a href="/contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
         </nav>
+        <a href="#" id="theme-toggle">
+            <i class="fa-solid fa-sun"></i>
+        </a>
     </header>
 
-    <!--SECTION # 1-->
     <div class="main-content">
-        <!--Partie avec mes informations (gauche)-->
         <div class="content">
             <div class="title">
                 <h3>Bienvenue sur mon Portfolio</h3>
@@ -40,19 +54,15 @@
             </div>
         </div>
         
-        <!--Partie avec une photo de profile (droite)-->
         <div class="picture">
             <img src="img/photo-profil-tempo.webp" alt="Photo de profil" class="animated">
         </div>
     </div>
 
-    <!--SECTION # 2-->
-<!--Partie avec les différents projets-->
-<div class="projects">
+    <div class="projects">
     <h2 class="projects-title">Mes Projets</h2>
     <div class="projects-container">
         
-        <!-- Projet 1: OpenClassroom -->
         <div class="project-accordion">
             <div class="project-header" onclick="toggleProject(this)">
                 <h3 class="project-title">OpenClassroom</h3>
@@ -61,7 +71,7 @@
             <div class="project-content">
                 <div class="project-inner">
                     <div class="project-image">
-                        <img src="/Portfolio/img/formation_js.png" alt="Projet OpenClassroom">
+                        <img src="img/formation_js.png" alt="Projet OpenClassroom">
                     </div>
                     <div class="project-info">
                         <p class="project-description">
@@ -74,13 +84,13 @@
                             </div>
                             <div class="progress-percentage">100%</div>
                         </div>
-                        <a href="/Portfolio/projects.html" class="project-link">Voir le projet</a>
+                        <a href="projects.html" class="project-link">Voir le projet</a>
                     </div>
                 </div>
 
                 <div class="project-inner">
                     <div class="project-image">
-                        <img src="/Portfolio/img/formation_python.png" alt="Projet OpenClassroom">
+                        <img src="img/formation_python.png" alt="Projet OpenClassroom">
                     </div>
                     <div class="project-info">
                         <p class="project-description">
@@ -93,13 +103,12 @@
                             </div>
                             <div class="progress-percentage">100%</div>
                         </div>
-                        <a href="/Portfolio/projects.html" class="project-link">Voir le projet</a>
+                        <a href="projects.html" class="project-link">Voir le projet</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Projet 2: Job chez Arsalis -->
         <div class="project-accordion">
             <div class="project-header" onclick="toggleProject(this)">
                 <h3 class="project-title">Job chez Arsalis</h3>
@@ -108,7 +117,7 @@
             <div class="project-content">
                 <div class="project-inner">
                     <div class="project-image">
-                        <img src="img/arsalis.jpg" alt="Projet Arsalis">
+                        <img src="img/ampli.jpg" alt="Projet Arsalis">
                     </div>
                     <div class="project-info">
                         <p class="project-description">
@@ -121,13 +130,12 @@
                             </div>
                             <div class="progress-percentage">100%</div>
                         </div>
-                        <a href="/Portfolio/projects.html" class="project-link">Voir le projet</a>
+                        <a href="projects.html" class="project-link">Voir le projet</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Projet 3: Tennis -->
         <div class="project-accordion">
             <div class="project-header" onclick="toggleProject(this)">
                 <h3 class="project-title">Tennis</h3>
@@ -149,13 +157,12 @@
                             </div>
                             <div class="progress-percentage">100%</div>
                         </div>
-                        <a href="/Portfolio/projects.html" class="project-link">Voir le projet</a>
+                        <a href="projects.html" class="project-link">Voir le projet</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Projet 4: Activité EPHEC -->
         <div class="project-accordion">
             <div class="project-header" onclick="toggleProject(this)">
                 <h3 class="project-title">Activité EPHEC</h3>
@@ -164,20 +171,20 @@
             <div class="project-content">
                 <div class="project-inner">
                     <div class="project-image">
-                        <img src="img/ephec.jpg" alt="Projet EPHEC">
+                        <img src="img/hackat_pc.jpg" alt="Projet EPHEC">
                     </div>
                     <div class="project-info">
                         <p class="project-description">
-                            Projets académiques réalisés à l'EPHEC. Développement d'applications web et mobile dans le cadre de formations en informatique.
+                            Hackathon EPHEC.
                         </p>
                         <div class="progress-container">
                             <span class="progress-label">Progression du projet</span>
                             <div class="progress-bar">
-                                <div class="progress-fill" data-progress="5"></div>
+                                <div class="progress-fill" data-progress="100"></div>
                             </div>
-                            <div class="progress-percentage">0%</div>
+                            <div class="progress-percentage">100%</div>
                         </div>
-                        <a href="/Portfolio/projects.html" class="project-link">Voir le projet</a>
+                        <a href="projects.html" class="project-link">Voir le projet</a>
                     </div>
                 </div>
             </div>
@@ -186,11 +193,8 @@
     </div>
 </div>
 
-    <!--SECTION # 3-->
-    <!--Section des compétences-->
     <div class="skills-section">
         <h2 class="skills-title">Mes Compétences</h2>
-        <!--Wrapper avec les langages que je maitrise-->
         <div class="wrapper">
             <div class="item item1">
                 <img src="img/logo_js.webp" alt="Logo Javascript">
@@ -211,8 +215,6 @@
         </div>
     </div>
 
-    <!--SECTION # 4-->
-    <!--Footer-->
     <footer>
         <div class="footer-content">
             <div class="footer-section">

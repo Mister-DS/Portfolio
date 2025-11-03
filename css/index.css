@@ -3,8 +3,11 @@ body{
     padding: 0;
     justify-content: center;
     align-items: center;
-    background-color: #364d27;
-    color: #172310;
+    /* MISE À JOUR: Fond noir par défaut */
+    background-color: #000000;
+    /* MISE À JOUR: Couleur de texte claire par défaut */
+    color: #efefee;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Navigation */
@@ -16,6 +19,7 @@ header {
     width: 100%;
     height: 80px;
     box-sizing: border-box;
+    position: relative; 
 }
 
 .logo {
@@ -23,6 +27,7 @@ header {
     font-size: 28px;
     margin: 0;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav {
@@ -68,7 +73,28 @@ nav a:hover::after {
     text-align: center;
 }
 
-/* Animations de fondu vers le haut pour toutes les sections */
+/* Style pour le bouton lune/soleil */
+#theme-toggle {
+    font-size: 1.5rem;
+    color: #efefee;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#theme-toggle:hover {
+    color: #8ab863;
+    transform: scale(1.1) rotate(15deg);
+}
+
+
+/* Animations de fondu */
 .fade-in-section {
     opacity: 0;
     transform: translateY(50px);
@@ -80,7 +106,7 @@ nav a:hover::after {
     transform: translateY(0);
 }
 
-/* Animation pour la section hero */
+/* Section hero */
 .main-content {
     display: flex;
     align-items: center;
@@ -95,12 +121,14 @@ nav a:hover::after {
     opacity: 0;
     transform: translateY(50px);
     animation: fadeInUp 1s ease 0.2s forwards;
+    transition: border-color 0.3s ease;
 }
 
-/* Animation pour la section projets */
+/* Section projets */
 .projects {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #2a3d1f 0%, #364d27 100%);
+    /* MISE À JOUR: Fond noir */
+    background: #000000;
     border-bottom: 2px solid rgba(138, 184, 99, 0.2);
     margin-bottom: 2rem;
     position: relative;
@@ -109,21 +137,23 @@ nav a:hover::after {
     transition: all 0.8s ease;
 }
 
-/* Animation pour la section compétences */
+/* Section compétences */
 .skills-section {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #364d27 0%, #2a3d1f 100%);
+    /* MISE À JOUR: Fond noir */
+    background: #000000;
     position: relative;
     overflow: hidden;
     border-bottom: 2px solid rgba(138, 184, 99, 0.2);
     margin-bottom: 2rem;
-   opacity: 0;
+    opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease;
 }
 
 footer {
-    background: linear-gradient(135deg, #2a3d1f 0%, #1e2b16 100%);
+    /* MISE À JOUR: Fond gris très foncé pour une légère séparation */
+    background: #050505;
     color: #efefee;
     padding: 3rem 0 1.5rem 0;
     margin-top: 4rem;
@@ -170,7 +200,6 @@ footer.is-visible {
     animation: fadeInUp 0.8s ease 1.2s forwards;
 }
 
-/* Keyframe pour l'animation de base */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -189,7 +218,7 @@ footer.is-visible {
     margin-left: 150px;
 }
 
-/* Photo de profil - À DROITE  */
+/* Photo de profil */
 .picture {
     position: relative;
     width: 350px;        
@@ -242,7 +271,7 @@ footer.is-visible {
     }
 }
 
-/* Styles pour le contenu de la section 1 */
+/* Contenu de la section 1 */
 .title h3 {
     color: #8ab863;
     font-size: 1.2rem;
@@ -264,6 +293,7 @@ footer.is-visible {
         0 0 15px #8ab863,
         0 0 20px #8ab863;
     animation: neonGlowText 3s ease-in-out infinite alternate;
+    transition: color 0.3s ease;
 }
 
 @keyframes neonGlowText {
@@ -291,9 +321,10 @@ footer.is-visible {
     max-width: 500px;
     opacity: 0.9;
     font-weight: 300;
+    transition: color 0.3s ease;
 }
 
-/* Icons plus proches du texte */
+/* Icons */
 .icons {
     display: flex;
     align-items: center;
@@ -324,14 +355,6 @@ a.iconst:hover {
 }
 
 /* SECTION 2 - PROJETS */
-.projects {
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #2a3d1f 0%, #364d27 100%);
-    border-bottom: 2px solid rgba(138, 184, 99, 0.2);
-    margin-bottom: 2rem;
-    position: relative;
-}
-
 .projects-title {
     text-align: center;
     margin-bottom: 3rem;
@@ -339,6 +362,7 @@ a.iconst:hover {
     font-size: 2.5rem;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(138, 184, 99, 0.3);
+    transition: color 0.3s ease;
 }
 
 .projects-container {
@@ -351,13 +375,15 @@ a.iconst:hover {
 
 /* Accordéon des projets */
 .project-accordion {
-    background: rgba(0, 0, 0, 0.2);
+    /* MISE À JOUR: Fond gris très léger sur noir */
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     overflow: hidden;
     border: 2px solid rgba(138, 184, 99, 0.3);
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.8s ease forwards;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .project-accordion:nth-child(1) { animation-delay: 0.1s; }
@@ -365,16 +391,10 @@ a.iconst:hover {
 .project-accordion:nth-child(3) { animation-delay: 0.3s; }
 .project-accordion:nth-child(4) { animation-delay: 0.4s; }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* En-tête de l'accordéon */
 .project-header {
     padding: 1.5rem 2rem;
+    /* Le fond "glow" vert est conservé, il rend bien sur le noir */
     background: linear-gradient(135deg, rgba(138, 184, 99, 0.1), rgba(138, 184, 99, 0.05));
     cursor: pointer;
     display: flex;
@@ -394,6 +414,7 @@ a.iconst:hover {
     font-size: 1.3rem;
     font-weight: 600;
     margin: 0;
+    transition: color 0.3s ease;
 }
 
 .project-toggle {
@@ -406,17 +427,13 @@ a.iconst:hover {
     transform: rotate(180deg);
 }
 
-/* Contenu de l'accordéon - VERSION CORRIGÉE */
+/* Contenu de l'accordéon */
 .project-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
-    background: rgba(0, 0, 0, 0.1);
-}
-
-/* Plus de limitation fixe - la hauteur sera calculée par JavaScript */
-.project-accordion.active .project-content {
-    /* La hauteur sera définie dynamiquement par le JS */
+    transition: max-height 0.4s ease, background 0.3s ease;
+    /* MISE À JOUR: Fond gris encore plus subtil */
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .project-inner {
@@ -433,6 +450,7 @@ a.iconst:hover {
     border-radius: 10px;
     overflow: hidden;
     border: 2px solid rgba(138, 184, 99, 0.3);
+    transition: border-color 0.3s ease;
 }
 
 .project-image img {
@@ -459,6 +477,7 @@ a.iconst:hover {
     line-height: 1.6;
     opacity: 0.9;
     margin: 0;
+    transition: color 0.3s ease;
 }
 
 /* Barre de progression */
@@ -475,11 +494,13 @@ a.iconst:hover {
 }
 
 .progress-bar {
-    background: rgba(0, 0, 0, 0.3);
+    /* MISE À JOUR: Fond de barre plus clair pour contraster sur le noir */
+    background: rgba(255, 255, 255, 0.1);
     height: 12px;
     border-radius: 6px;
     overflow: hidden;
     position: relative;
+    transition: background 0.3s ease;
 }
 
 .progress-fill {
@@ -513,6 +534,7 @@ a.iconst:hover {
     font-weight: 600;
     text-align: center;
     margin-top: 0.5rem;
+    transition: color 0.3s ease;
 }
 
 /* Lien vers projet */
@@ -550,15 +572,6 @@ a.iconst:hover {
 }
 
 /* SECTION 3 - COMPÉTENCES */
-.skills-section {
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #364d27 0%, #2a3d1f 100%);
-    position: relative;
-    overflow: hidden;
-    border-bottom: 2px solid rgba(138, 184, 99, 0.2);
-    margin-bottom: 2rem;
-}
-
 .skills-section::before {
     content: '';
     position: absolute;
@@ -576,33 +589,7 @@ a.iconst:hover {
     font-size: 2.5rem;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(138, 184, 99, 0.3);
-}
-
-/* Section des compétences */
-.skills-section {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #364d27 0%, #2a3d1f 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.skills-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #8ab863, transparent);
-}
-
-.skills-title {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #efefee;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(138, 184, 99, 0.3);
+    transition: color 0.3s ease;
 }
 
 /* Wrapper*/
@@ -614,7 +601,8 @@ a.iconst:hover {
     height: 140px;
     overflow: hidden;
     border-radius: 15px;
-    background: rgba(0, 0, 0, 0.1);
+    /* MISE À JOUR: Fond gris très subtil */
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(138, 184, 99, 0.2);
     mask-image: linear-gradient(
@@ -624,9 +612,10 @@ a.iconst:hover {
         rgba(0, 0, 0, 1) 85%,
         rgba(0, 0, 0, 0) 100%
     );
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-/* Style des items  */
+/* Style des items (les cartes restent claires, c'est joli) */
 .item {
     width: 120px;
     height: 100px;
@@ -646,7 +635,6 @@ a.iconst:hover {
     border: 2px solid transparent;
 }
 
-/* Style des logos  */
 .item img {
     width: 50px;
     height: 50px;
@@ -656,7 +644,6 @@ a.iconst:hover {
     transition: all 0.3s ease;
 }
 
-/* Style du texte h5  */
 .item h5 {
     text-align: center;
     margin: 0;
@@ -666,7 +653,6 @@ a.iconst:hover {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Effet de survol */
 .item:hover {
     transform: scale(1.08) translateY(-5px);
     box-shadow: 
@@ -697,34 +683,12 @@ a.iconst:hover {
     }
 }
 
-/* Délais d'animation*/
-.item1 {
-    animation-delay: 0s;
-}
-
-.item2 {
-    animation-delay: -5s;
-}
-
-.item3 {
-    animation-delay: -10s;
-}
-
-.item4 {
-    animation-delay: -15s;
-}
+.item1 { animation-delay: 0s; }
+.item2 { animation-delay: -5s; }
+.item3 { animation-delay: -10s; }
+.item4 { animation-delay: -15s; }
 
 /* Footer */
-footer {
-    background: linear-gradient(135deg, #2a3d1f 0%, #1e2b16 100%);
-    color: #efefee;
-    padding: 3rem 0 1.5rem 0;
-    margin-top: 4rem;
-    border-top: 2px solid rgba(138, 184, 99, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
 footer::before {
     content: '';
     position: absolute;
@@ -798,6 +762,7 @@ footer::before {
     border-top: 1px solid rgba(138, 184, 99, 0.2);
     color: #999;
     font-size: 0.9rem;
+    transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .footer-bottom p {
@@ -816,7 +781,7 @@ footer::before {
     }
 }
 
-/* Effet de brillance qui passe */
+/* Effet de brillance */
 .item::before {
     content: '';
     position: absolute;
@@ -832,4 +797,188 @@ footer::before {
 
 .item:hover::before {
     opacity: 1;
+}
+
+
+/*
+=================================================
+MISE À JOUR: STYLES DU MODE CLAIR (LIGHT MODE)
+=================================================
+*/
+
+body.light-mode {
+    /* MISE À JOUR: Fond blanc pur */
+    background-color: #FFFFFF;
+    /* MISE À JOUR: Couleur de texte foncée */
+    color: #333333;
+}
+
+body.light-mode .logo {
+    color: #000000;
+}
+
+body.light-mode nav a {
+    color: #000000;
+}
+
+body.light-mode nav a::after {
+    /* MISE À JOUR: Fond de survol noir */
+    background: #000000;
+}
+
+body.light-mode nav a:hover {
+    color: #FFFFFF;
+}
+
+body.light-mode #theme-toggle {
+    color: #000000;
+}
+body.light-mode #theme-toggle:hover {
+    color: #364d27; /* L'accent vert reste joli */
+}
+
+body.light-mode .main-content {
+    /* MISE À JOUR: Bordure noire subtile */
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .name h1 {
+    color: #000000;
+    text-shadow: 
+        0 0 5px rgba(138, 184, 99, 0.7),
+        0 0 10px rgba(138, 184, 99, 0.5);
+}
+
+body.light-mode .description p {
+    color: #333333;
+}
+
+body.light-mode .picture img {
+    border: 3px solid #364d27;
+    box-shadow: 
+        0 0 10px #364d27,
+        0 0 20px #364d27;
+}
+
+/* Keyframes pour la lueur en mode clair */
+@keyframes neonPulseLight {
+    from {
+        box-shadow: 
+            0 0 10px #364d27,
+            0 0 20px #364d27;
+    }
+    to {
+        box-shadow: 
+            0 0 5px #364d27,
+            0 0 15px #364d27;
+    }
+}
+body.light-mode .picture img.animated {
+    animation-name: neonPulseLight;
+}
+
+body.light-mode .picture img:hover {
+    box-shadow: 
+        0 0 15px #364d27,
+        0 0 25px #364d27;
+}
+
+body.light-mode .projects {
+    /* MISE À JOUR: Fond gris très clair */
+    background: #f4f4f4;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .projects-title {
+    color: #000000;
+    text-shadow: 0 0 10px rgba(54, 77, 39, 0.3);
+}
+
+body.light-mode .project-accordion {
+    /* MISE À JOUR: Fond blanc sur gris clair */
+    background: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .project-header {
+    background: linear-gradient(135deg, rgba(54, 77, 39, 0.1), rgba(54, 77, 39, 0.05));
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .project-header:hover {
+    background: linear-gradient(135deg, rgba(54, 77, 39, 0.15), rgba(54, 77, 39, 0.08));
+    box-shadow: inset 0 0 20px rgba(54, 77, 39, 0.1);
+}
+
+body.light-mode .project-title {
+    color: #000000;
+}
+
+body.light-mode .project-content {
+    background: #fcfcfc;
+}
+
+body.light-mode .project-image {
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .project-description {
+    color: #333333;
+}
+
+body.light-mode .progress-bar {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .progress-percentage {
+    color: #000000;
+}
+
+body.light-mode .project-link:hover {
+    background: #8ab863;
+    color: #000;
+}
+
+body.light-mode .skills-section {
+    background: #f4f4f4;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .skills-title {
+    color: #000000;
+}
+
+body.light-mode .wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode footer {
+    background: #eeeeee;
+    color: #333333;
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .footer-section p, 
+body.light-mode .footer-section a {
+    color: #333333;
+}
+
+body.light-mode .footer-section a:hover {
+    color: #8ab863;
+}
+
+body.light-mode .footer-social a {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .footer-social a:hover {
+    background: #8ab863;
+    color: #000;
+}
+
+body.light-mode .footer-bottom {
+    border-top-color: rgba(0, 0, 0, 0.1);
+    color: #555;
 }
