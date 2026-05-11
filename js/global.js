@@ -19,6 +19,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const cvDownload = document.getElementById('cv-download');
+  if (cvDownload) {
+    cvDownload.addEventListener('click', async (e) => {
+      e.preventDefault();
+
+      try {
+        const response = await fetch(cvDownload.getAttribute('href'));
+        if (!response.ok) throw new Error('CV not found');
+
+        const blob = await response.blob();
+        const objectUrl = URL.createObjectURL(blob);
+        const tempLink = document.createElement('a');
+        tempLink.href = objectUrl;
+        tempLink.download = 'CV_Simon_2025.pdf';
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        tempLink.remove();
+        setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+      } catch (error) {
+        window.location.href = cvDownload.getAttribute('href');
+      }
+    });
+  }
+
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
