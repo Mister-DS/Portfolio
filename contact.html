@@ -1,169 +1,167 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Dierickx Simon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <script src="js/theme.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Simon Dierickx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <script src="js/global.js" defer></script>
 </head>
 <body>
 
-    <script>
-        (function() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'light') {
-                document.body.classList.add('light-mode');
-            }
-        })();
-    </script>
+<header>
+  <h1 class="logo"><span>~/</span>simon.dev</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="projects.html">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="#" id="theme-toggle" title="Changer le thème">
+    <i class="fa-solid fa-sun"></i>
+  </a>
+</header>
 
-    <header>
-        <h1 class="logo">Portfolio</h1>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <a href="#" id="theme-toggle">
-            <i class="fa-solid fa-sun"></i>
-        </a>
-    </header>
+<main>
 
-    <section class="hero">
-        <h1>Contactez-moi</h1>
-        <p>N'hésitez pas à me contacter pour discuter de vos projets ou pour toute question. Je serais ravi de collaborer avec vous !</p>
-    </section>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="section-label">Contact</div>
+      <h1 class="section-title">Travaillons <em>ensemble</em></h1>
+      <p>Un projet, une question, une opportunité — je suis disponible.</p>
+    </div>
+  </section>
 
-    <section class="profile-section">
-        <img src="img/photo-profil-tempo.webp" alt="Photo de profil" class="profile-image">
-    </section>
+  <section class="section contact-section">
+    <div class="contact-grid">
 
-    <section class="contact-section">
-        <div class="contact-container">
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="contact-info">
-                    <h3>Email</h3>
-                    <p>dierickxsimon198@gmail.com</p>
-                    <a href="mailto:dierickxsimon198@gmail.com" class="contact-btn">Envoyer un email</a>
-                </div>
-            </div>
-
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="contact-info">
-                    <h3>Téléphone</h3>
-                    <p>+32 499 50 03 33</p>
-                    <a href="tel:+32499500333" class="contact-btn">Appeler</a>
-                </div>
-            </div>
-
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="contact-info">
-                    <h3>Localisation</h3>
-                    <p>Walhain, Belgique</p>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Walhain,Belgium" class="contact-btn" target="_blank" rel="noopener noreferrer">Voir sur la carte</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="form-section">
-        <div class="form-container">
-            <h2>Envoyez-moi un message</h2>
-            <form class="contact-form" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder=" " required>
-                    <label for="name">Votre nom</label>
-                </div>
-                
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder=" " required>
-                    <label for="email">Votre email</label>
-                </div>
-                
-                <div class="form-group">
-                    <input type="text" id="subject" name="subject" placeholder=" " required>
-                    <label for="subject">Sujet</label>
-                </div>
-                
-                <div class="form-group">
-                    <textarea id="message" name="message" placeholder=" " required rows="5"></textarea>
-                    <label for="message">Votre message</label>
-                </div>
-                
-                <button type="submit" class="submit-btn">
-                    <i class="fas fa-paper-plane"></i>
-                    Envoyer le message
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <section class="social-section">
-        <h3>Retrouvez-moi aussi sur</h3>
-        <div class="social-links">
-            <a href="https://www.facebook.com/simon.dierickx.10" class="social-link" style="--color:#1877f2;">
-                <i class="fab fa-facebook"></i>
+      <!-- INFO -->
+      <div class="contact-info-col">
+        <div class="contact-card card reveal">
+          <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h3>Email</h3>
+            <p>dierickxsimon198@gmail.com</p>
+            <a href="mailto:dierickxsimon198@gmail.com" class="btn btn-outline" style="margin-top:.75rem; font-size:.75rem; padding:.45rem 1rem;">
+              Envoyer un mail
             </a>
-            <a href="#" class="social-link" style="--color:#607D8B;">
-                <i class="fab fa-discord"></i>
-            </a>
-            <a href="#" class="social-link" style="--color:#e4405f;">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="social-link" style="--color:#0077b5;">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>À propos</h3>
-                <p>Développeur web passionné par la création d'expériences utilisateur modernes et intuitives.</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Navigation</h3>
-                <p><a href="index.html">Accueil</a></p>
-                <p><a href="about.html">À propos</a></p>
-                <p><a href="projects.html">Projets</a></p>
-                <p><a href="contact.html">Contact</a></p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Me suivre</h3>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/simon.dierickx.10"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-discord"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <a href="mailto:dierickxsimon198@gmail.com">📧 dierickxsimon198@gmail.com</a><br>
-                <a href="tel:+32499500333">📱 +32 499 50 03 33</a>
-                <p>📍 Belgique</p>
-            </div>
+          </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2025 Dierickx Simon. Tous droits réservés.</p>
+        <div class="contact-card card reveal">
+          <div class="contact-card-icon"><i class="fa-solid fa-map-marker-alt"></i></div>
+          <div>
+            <h3>Localisation</h3>
+            <p>Walhain · Belgique</p>
+            <p class="contact-sub">Louvain-la-Neuve (EPHEC)</p>
+          </div>
         </div>
-    </footer>
+
+        <div class="contact-card card reveal">
+          <div class="contact-card-icon"><i class="fa-brands fa-github"></i></div>
+          <div>
+            <h3>GitHub</h3>
+            <p>github.com/Mister-DS</p>
+            <a href="https://github.com/Mister-DS" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:.75rem; font-size:.75rem; padding:.45rem 1rem;">
+              Voir le profil
+            </a>
+          </div>
+        </div>
+
+        <div class="social-row reveal">
+          <a href="https://github.com/Mister-DS" target="_blank" rel="noopener" class="social-btn" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/simon-dierickx" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="mailto:dierickxsimon198@gmail.com" class="social-btn" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="form-col reveal">
+        <div class="card form-card">
+          <h2 class="form-title">Envoyez-moi un message</h2>
+          <p class="form-sub">Je réponds généralement sous 24h.</p>
+
+          <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <input type="text" id="subject" name="subject" placeholder="Sujet du message" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Votre message..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary submit-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              Envoyer le message
+            </button>
+          </form>
+
+          <div id="form-success" class="form-success hidden">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Message envoyé ! Je vous réponds rapidement.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo"><span>~/</span>simon.dev</span>
+      <p>Étudiant en informatique à l'EPHEC Louvain-la-Neuve. Passionné par le développement full-stack, les réseaux et la cybersécurité.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="projects.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Projets</h4>
+      <a href="projects.html">nous.</a>
+      <a href="projects.html">Trading Bot</a>
+      <a href="projects.html">BTB AI</a>
+      <a href="projects.html">AutoSniper</a>
+    </div>
+    <div class="footer-col">
+      <h4>Réseaux</h4>
+      <div class="footer-social">
+        <a href="https://github.com/Mister-DS" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/simon-dierickx" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:dierickxsimon198@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Simon Dierickx — Tous droits réservés.</p>
+    <p>Louvain-la-Neuve, Belgique</p>
+  </div>
+</footer>
+
+<script src="js/contact.js"></script>
+
 </body>
 </html>
