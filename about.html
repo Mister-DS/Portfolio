@@ -5,35 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos - Dierickx Simon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/about.css">
-    <script src="js/theme.js" defer></script>
+    <script src="js/global.js" defer></script>
 </head>
 <body>
 
-    <script>
-        (function() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'light') {
-                document.body.classList.add('light-mode');
-            }
-        })();
-    </script>
+<header>
+  <h1 class="logo"><span>~/</span>simon.dev</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="projects.html">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="#" id="theme-toggle" title="Changer le thème">
+    <i class="fa-solid fa-sun"></i>
+  </a>
+</header>
 
-    <header>
-        <h1 class="logo">Portfolio</h1>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <a href="#" id="theme-toggle">
-            <i class="fa-solid fa-sun"></i>
-        </a>
-    </header>
+<main>
 
-    <section class="hero">
-        <div class="hero-content">
+    <section class="page-hero">
+        <div class="page-hero-inner">
             <h1>À propos de moi</h1>
             <p>Passionné par l'informatique</p>
         </div>
@@ -238,42 +232,49 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>À propos</h3>
-                <p>Développeur web passionné par la création d'expériences utilisateur modernes et intuitives.</p>
-            </div>
+    <section class="cv-section" style="text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, rgba(0, 229, 160, 0.05) 0%, rgba(0, 184, 212, 0.05) 100%); border-radius: 12px; margin: 4rem auto; max-width: 1100px;">
+        <h2 style="margin-bottom: 1rem;">Mon CV</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Téléchargez mon CV détaillé pour en savoir plus sur mon parcours et mes compétences.</p>
+        <a href="#" class="btn btn-primary" style="display: inline-flex;">
+            <i class="fas fa-download"></i> Télécharger mon CV
+        </a>
+    </section>
 
-            <div class="footer-section">
-                <h3>Navigation</h3>
-                <p><a href="index.html">Accueil</a></p>
-                <p><a href="about.html">À propos</a></p>
-                <p><a href="projects.html">Projets</a></p>
-                <p><a href="contact.html">Contact</a></p>
-            </div>
+</main>
 
-            <div class="footer-section">
-                <h3>Me suivre</h3>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/simon.dierickx.10"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-discord"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo"><span>~/</span>simon.dev</span>
+      <p>Étudiant en informatique à l'EPHEC Louvain-la-Neuve. Passionné par le développement full-stack, les réseaux et la cybersécurité.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="projects.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Projets</h4>
+      <a href="projects.html">BTB</a>
+      <a href="projects.html">Lares</a>
+      <a href="projects.html">Novatech</a>
+      <a href="projects.html">Signaux ID Vocal</a>
+    </div>
+    <div class="footer-col">
+      <h4>Réseaux</h4>
+      <div class="footer-social">
+        <a href="https://github.com/Mister-DS" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:dierickxsimon198@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Simon Dierickx — Tous droits réservés.</p>
+    <p>Louvain-la-Neuve, Belgique</p>
+  </div>
+</footer>
 
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <a href="mailto:dierickxsimon198@gmail.com">📧 dierickxsimon198@gmail.com</a><br>
-                <a href="tel:+32499500333">📱 +32 499 50 03 33</a>
-                <p>📍 Belgique</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 Dierickx Simon. Tous droits réservés.</p>
-        </div>
-    </footer>
 </body>
 </html>
