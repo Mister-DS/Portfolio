@@ -1,256 +1,197 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Dierickx Simon - HE202205</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" ... />
-    <link rel="stylesheet" href="css/index.css">
-    
-    <script src="js/index.js" defer></script>
-    
-    <script src="js/theme.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Dierickx — Portfolio</title>
+  <meta name="description" content="Portfolio de Simon Dierickx, étudiant en informatique à l'EPHEC. Développeur web, réseaux et systèmes.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/global.js" defer></script>
 </head>
 <body>
 
-    <script>
-        (function() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'light') {
-                document.body.classList.add('light-mode');
-            }
-        })();
-    </script>
+<header>
+  <h1 class="logo"><span>~/</span>simon.dev</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="projects.html">Projets</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="#" id="theme-toggle" title="Changer le thème">
+    <i class="fa-solid fa-sun"></i>
+  </a>
+</header>
 
-    <header>
-        <h1 class="logo">Portfolio</h1>
-        <nav class="navbar">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
-        </nav>
-        <a href="#" id="theme-toggle">
-            <i class="fa-solid fa-sun"></i>
-        </a>
-    </header>
+<main>
 
-    <div class="main-content">
-        <div class="content">
-            <div class="title">
-                <h3>Bienvenue sur mon Portfolio</h3>
-            </div>
-            <div class="name">
-                <h1>Dierickx Simon</h1>
-            </div>
-            <div class="description">
-                <p>Développeur web passionné par la création d'expériences utilisateur intuitives et engageantes.</p>
-            </div>
-            <div class="icons">
-                <a href="https://www.facebook.com/simon.dierickx.10" class="iconst" style="--color:#1877f2;"><i class="fa-brands fa-facebook"></i></a>
-                <a href="" class="iconst" style="--color:#607D8B;"><i class="fa-brands fa-discord"></i></a>
-                <a href="" class="iconst" style="--color:#e4405f;"><i class="fa-brands fa-instagram"></i></a>
-                <a href="" class="iconst" style="--color:#0077b5;"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-tag">
+          <span class="dot"></span>
+          <span>Disponible pour des opportunités</span>
         </div>
-        
-        <div class="picture">
-            <img src="img/photo-profil-tempo.webp" alt="Photo de profil" class="animated">
+        <h1 class="hero-name">
+          Simon<br>
+          <em>Dierickx</em>
+        </h1>
+        <p class="hero-role">
+          <span class="typed" id="typed-text"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-desc">
+          Étudiant BAC 3 en Informatique à l'EPHEC — passionné par le développement web full-stack, les réseaux et la cybersécurité. Je construis des outils qui résolvent de vrais problèmes.
+        </p>
+        <div class="hero-cta">
+          <a href="projects.html" class="btn btn-primary">
+            <i class="fa-solid fa-code"></i> Voir mes projets
+          </a>
+          <a href="contact.html" class="btn btn-outline">
+            <i class="fa-solid fa-paper-plane"></i> Me contacter
+          </a>
         </div>
+        <div class="hero-links">
+          <a href="https://github.com/Mister-DS" target="_blank" rel="noopener" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="mailto:dierickxsimon198@gmail.com" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">simon@portfolio ~ $</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
+            <p class="t-out">simon_dierickx</p>
+            <p><span class="t-prompt">$</span> <span class="t-cmd">cat skills.json</span></p>
+            <p class="t-out t-json">{</p>
+            <p class="t-out t-json">  <span class="t-key">"stack"</span>: [<span class="t-val">"Next.js"</span>, <span class="t-val">"Python"</span>, <span class="t-val">"FastAPI"</span>],</p>
+            <p class="t-out t-json">  <span class="t-key">"infra"</span>: [<span class="t-val">"Nginx"</span>, <span class="t-val">"Docker"</span>, <span class="t-val">"Debian"</span>],</p>
+            <p class="t-out t-json">  <span class="t-key">"focus"</span>: <span class="t-val">"réseaux & cybersécurité"</span></p>
+            <p class="t-out t-json">}</p>
+            <p><span class="t-prompt">$</span> <span class="t-cmd">ls projects/</span></p>
+            <p class="t-out">btb-ai/ novatech/ lares/ Signaux_id_vocal/ ...</p>
+            <p class="t-blink"><span class="t-prompt">$</span> <span class="cursor-blink">█</span></p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="projects">
-    <h2 class="projects-title">Mes Projets</h2>
-    <div class="projects-container">
-        
-        <div class="project-accordion">
-            <div class="project-header" onclick="toggleProject(this)">
-                <h3 class="project-title">OpenClassroom</h3>
-                <span class="project-toggle">▼</span>
-            </div>
-            <div class="project-content">
-                <div class="project-inner">
-                    <div class="project-image">
-                        <img src="img/formation_js.png" alt="Projet OpenClassroom">
-                    </div>
-                    <div class="project-info">
-                        <p class="project-description">
-                            Formation sur OpenClassroom. Celle ci m'a permis d'acquérir des compétences en JavaScript.
-                        </p>
-                        <div class="progress-container">
-                            <span class="progress-label">Progression du projet</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-progress="100"></div>
-                            </div>
-                            <div class="progress-percentage">100%</div>
-                        </div>
-                        <a href="projects.html" class="project-link">Voir le projet</a>
-                    </div>
-                </div>
-
-                <div class="project-inner">
-                    <div class="project-image">
-                        <img src="img/formation_python.png" alt="Projet OpenClassroom">
-                    </div>
-                    <div class="project-info">
-                        <p class="project-description">
-                            Formation et projets réalisés sur OpenClassroom. Celle ci m'a permis d'acquérir des compétences en Python. 
-                        </p>
-                        <div class="progress-container">
-                            <span class="progress-label">Progression du projet</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-progress="100"></div>
-                            </div>
-                            <div class="progress-percentage">100%</div>
-                        </div>
-                        <a href="projects.html" class="project-link">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
+  <!-- COMPÉTENCES -->
+  <section class="section skills-section">
+    <div class="section-label">Compétences</div>
+    <h2 class="section-title">Ma <em>stack</em></h2>
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <h4 class="skill-group-title"><i class="fa-solid fa-code"></i> Développement</h4>
+        <div class="skill-list">
+          <div class="skill-item">
+            <span>Next.js / React</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+          </div>
+          <div class="skill-item">
+            <span>Python / FastAPI</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+          </div>
+          <div class="skill-item">
+            <span>HTML / CSS / JS</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+          </div>
+          <div class="skill-item">
+            <span>Prisma / SQL</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div>
+          </div>
         </div>
-
-        <div class="project-accordion">
-            <div class="project-header" onclick="toggleProject(this)">
-                <h3 class="project-title">Job chez Arsalis</h3>
-                <span class="project-toggle">▼</span>
-            </div>
-            <div class="project-content">
-                <div class="project-inner">
-                    <div class="project-image">
-                        <img src="img/ampli.jpg" alt="Projet Arsalis">
-                    </div>
-                    <div class="project-info">
-                        <p class="project-description">
-                            Expérience professionnelle chez Arsalis. Aperçu du travail sur des tapis de courses. Approche technique dans l'électronique.
-                        </p>
-                        <div class="progress-container">
-                            <span class="progress-label">Progression du projet</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-progress="100"></div>
-                            </div>
-                            <div class="progress-percentage">100%</div>
-                        </div>
-                        <a href="projects.html" class="project-link">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4 class="skill-group-title"><i class="fa-solid fa-server"></i> Infra & Réseaux</h4>
+        <div class="skill-list">
+          <div class="skill-item">
+            <span>Linux / Debian</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+          </div>
+          <div class="skill-item">
+            <span>Nginx / Docker</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+          </div>
+          <div class="skill-item">
+            <span>Cisco / pfSense</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div>
+          </div>
+          <div class="skill-item">
+            <span>VLANs / VPN / GNS3</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="72%"></div></div>
+          </div>
         </div>
-
-        <div class="project-accordion">
-            <div class="project-header" onclick="toggleProject(this)">
-                <h3 class="project-title">Tennis</h3>
-                <span class="project-toggle">▼</span>
-            </div>
-            <div class="project-content">
-                <div class="project-inner">
-                    <div class="project-image">
-                        <img src="img/tennis.jpg" alt="Projet Tennis">
-                    </div>
-                    <div class="project-info">
-                        <p class="project-description">
-                            Sport que je pratique régulièrement. Participation à des tournois locaux et suivi des classements depuis 15 années.
-                        </p>
-                        <div class="progress-container">
-                            <span class="progress-label">Progression du projet</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-progress="100"></div>
-                            </div>
-                            <div class="progress-percentage">100%</div>
-                        </div>
-                        <a href="projects.html" class="project-link">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4 class="skill-group-title"><i class="fa-solid fa-shield-halved"></i> Cybersécurité</h4>
+        <div class="skill-list">
+          <div class="skill-item">
+            <span>Sécurité Layer 2 & 3</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+          </div>
+          <div class="skill-item">
+            <span>IPSec / Firewall</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="68%"></div></div>
+          </div>
+          <div class="skill-item">
+            <span>Tailscale / VPN</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+          </div>
         </div>
-
-        <div class="project-accordion">
-            <div class="project-header" onclick="toggleProject(this)">
-                <h3 class="project-title">Activité EPHEC</h3>
-                <span class="project-toggle">▼</span>
-            </div>
-            <div class="project-content">
-                <div class="project-inner">
-                    <div class="project-image">
-                        <img src="img/hackat_pc.jpg" alt="Projet EPHEC">
-                    </div>
-                    <div class="project-info">
-                        <p class="project-description">
-                            Hackathon EPHEC.
-                        </p>
-                        <div class="progress-container">
-                            <span class="progress-label">Progression du projet</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-progress="100"></div>
-                            </div>
-                            <div class="progress-percentage">100%</div>
-                        </div>
-                        <a href="projects.html" class="project-link">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+      </div>
     </div>
-</div>
+  </section>
 
-    <div class="skills-section">
-        <h2 class="skills-title">Mes Compétences</h2>
-        <div class="wrapper">
-            <div class="item item1">
-                <img src="img/logo_js.webp" alt="Logo Javascript">
-                <h5>Javascript</h5>
-            </div>
-            <div class="item item2">
-                <img src="img/HTML5_Logo_128.webp" alt="Logo html">
-                <h5>HTML</h5>
-            </div>
-            <div class="item item3">
-                <img src="img/logo_css.webp" alt="Logo CSS">
-                <h5>CSS</h5>
-            </div>
-            <div class="item item4">
-                <img src="img/python-logo-0.webp" alt="Logo Python">
-                <h5>Python</h5>
-            </div>
-        </div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo"><span>~/</span>simon.dev</span>
+      <p>Étudiant en informatique à l'EPHEC Louvain-la-Neuve. Passionné par le développement full-stack, les réseaux et la cybersécurité.</p>
     </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="projects.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Projets</h4>
+      <a href="projects.html">BTB</a>
+      <a href="projects.html">Lares</a>
+      <a href="projects.html">Novatech</a>
+      <a href="projects.html">Signaux ID Vocal</a>
+    </div>
+    <div class="footer-col">
+      <h4>Réseaux</h4>
+      <div class="footer-social">
+        <a href="https://github.com/Mister-DS" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:dierickxsimon198@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Simon Dierickx — Tous droits réservés.</p>
+    <p>Louvain-la-Neuve, Belgique</p>
+  </div>
+</footer>
+ 
+<script src="js/index.js"></script>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>À propos</h3>
-                <p>Développeur web passionné par la création d'expériences utilisateur modernes et intuitives.</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Navigation</h3>
-                <p><a href="index.html">Accueil</a></p>
-                <p><a href="about.html">À propos</a></p>
-                <p><a href="projects.html">Projets</a></p>
-                <p><a href="contact.html">Contact</a></p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Me suivre</h3>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/simon.dierickx.10"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-discord"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <a href="mailto:dierickxsimon198@gmail.com">📧 dierickxsimon198@gmail.com</a><br>
-                <a href="tel:+32499500333">📱 +32 499 50 03 33</a>
-                <p>📍 Belgique</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Dierickx Simon. Tous droits réservés.</p>
-        </div>
-    </footer>
 </body>
 </html>
