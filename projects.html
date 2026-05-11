@@ -2,356 +2,340 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/projects.js" defer></script>
-    <script src="js/theme.js" defer></script>
-
-    <title>Projets</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets — Simon Dierickx</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <script src="js/global.js" defer></script>
 </head>
 
 <body>
-    <script>
-        (function() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'light') {
-                document.body.classList.add('light-mode');
-            }
-        })();
-    </script>
+  <header>
+    <h1 class="logo"><span>~/</span>simon.dev</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="projects.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="#" id="theme-toggle" title="Changer le thème">
+      <i class="fa-solid fa-sun"></i>
+    </a>
+  </header>
 
-    <header>
-        <h1 class="logo">Portfolio</h1>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <a href="#" id="theme-toggle">
-            <i class="fa-solid fa-sun"></i>
-        </a>
-    </header>
-
-    <section class="OpenClassroom project-section">
-        <h1>OpenClassroom</h1>
-        <div class="content">
-            <div class="title">
-                <h2>Formation JavaScript</h2>
-                <img src="img/formation_js.png" alt="Formation JavaScript" class="project-image">
-            </div>
-            <div class="description">
-                <p>Le but de cette formation était de perfectionner mes lacunes en JavaScript et de pouvoir continuer
-                    pleinement dans les projets et pourquoi pas mon métier future.</p>
-                <hr class="separator">
-                <p class="time">Durée : 15 heures</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="title">
-                <h2>Formation Python</h2>
-                <img src="img/formation_python.png" alt="Formation Python" class="project-image">
-            </div>
-            <div class="description">
-                <p>Le but de cette formation était d'apprendre et de maitriser les bases du langages python. Cette
-                    formation m'a permis de me perfectionner dans celui-ci et de pouvoir rendre le projet du Q1 en BAC 2
-                    (gestion de restaurant)</p>
-                <hr class="separator">
-                <p class="time">Durée : 6 heures</p>
-            </div>
-        </div>
-    </section>
-    <hr>
-
-    <section class="Arsalis project-section">
-        <h1>Arsalis</h1>
-        <div class="content">
-            <div class="title">
-                <h2>Prise de mesures sur un ampli</h2>
-                <img src="img/ampli.jpg" alt="Ampli" class="project-image">
-            </div>
-            <div class="description">
-                <p>Prise de mesures sur un ampli et par la suite stockage des données pour analyse et diagnostic.</p>
-                <hr class="separator">
-                <p class="time">Durée : 450 heures</p>
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="title">
-                <h2>Soudure de câbles</h2>
-                <img src="img/IMG_6532.jpg" alt="Soudure 1" class="project-image">
-            </div>
-            <div class="description">
-                <p>Travaux de soudure sur des câbles électroniques. Cette expérience m'a permis d'acquérir des
-                    compétences techniques précises en électronique.</p>
-                <hr class="separator">
-                <p class="time">Durée : 450 heures</p>
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="title">
-                <h2>Soudure de composants</h2>
-                <img src="img/IMG_6533.jpg" alt="Soudure 2" class="project-image">
-            </div>
-            <div class="description">
-                <p>Poursuite des travaux de soudure et manipulation de composants électroniques pour la réparation et
-                    l'assemblage d'équipements.</p>
-                <hr class="separator">
-                <p class="time">Durée : 450 heures</p>
-            </div>
-        </div>
-    </section>
-    <hr>
-
-    <section class="Tennis project-section">
-        <h1>Tennis Club</h1>
-        <div class="content">
-            <div class="title">
-                <h2>Sport</h2>
-                <img src="img/tennis.png" alt="Logo Tennis" class="project-image">
-            </div>
-            <div class="description">
-                <p>Depuis tout petit (mes 5 ans) je pratique ce sport pour suivre mon père dans cette discipline que
-                    j'aime pratiquer avec mes amis, ma famille et autres. Je possède donc un classement de tennis.</p>
-                <hr class="separator">
-                <p class="time">Durée : 15 années</p>
-            </div>
-        </div>
-    </section>
-    <hr>
-
-    <section class="Ephec project-section">
-        <h1>Ephec</h1>
-        <div class="content">
-            <div class="title">
-                <h2>Hackathon</h2>
-                <img src="img/team_hacka.png" alt="Équipe Hackathon" class="project-image">
-            </div>
-            <div class="description">
-                <p>Participation au hackathon de l'EPHEC. Travail en équipe sur un projet innovant dans un temps limité.
-                </p>
-                <hr class="separator">
-                <p class="time">Durée : 48 heures</p>
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="title">
-                <h2>Messages Hackathon</h2>
-                <img src="img/message1_hacka.png" alt="Messages Hackathon" class="project-image">
-            </div>
-            <div class="description">
-                <p>Échanges et collaboration durant le hackathon. Communication et coordination de l'équipe pour mener à
-                    bien le projet.</p>
-                <hr class="separator">
-                <p class="time">Durée : 48 heures</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="title">
-                <h2>Photo du pc utilisé</h2>
-                <img src="img/hackat_pc.jpg" alt="Pc démonté" class="project-image">
-            </div>
-            <div class="description">
-                <p>Utilisation et démontage d'un vieux HP pour préparer via une vielle machine à écrire un Apple II
-                    fonctionnel.</p>
-                <hr class="separator">
-                <p class="time">Durée : 48 heures</p>
-            </div>
-        </div>
-    </section>
-    <hr>
-
-    <section class="Math project-section">
-        <h1>Cours de Mathématiques</h1>
-        <div class="content">
-            <div class="title">
-                <h2>Rattrapage Math</h2>
-                <img src="img/math_integral.jpg" alt="Cours de Math" class="project-image">
-            </div>
-            <div class="description">
-                <p>Cours de rattrapage en mathématiques pour renforcer mes compétences et combler mes lacunes dans
-                    certains domaines clés.</p>
-                <hr class="separator">
-                <p class="time">Durée : 10 heures</p>
-            </div>
-        </div>
-    </section>
-    <hr>
-
-    <section class="Conferences project-section">
-        <h1>Conférences</h1>
-        <div class="content">
-            <div class="title">
-                <h2>Cloud avec M365 et Azure Infrastructure</h2>
-                <img src="img/conference_azure.png" alt="Conférence Azure" class="project-image">
-            </div>
-            <div class="description">
-                <p>Conférence donnée le 3 novembre 2025 par Kevin Keurvels de la société Axentys : Services et support informatiques pour professionnels. Cette conférence a permis d'explorer les solutions cloud Microsoft 365 et Azure Infrastructure.</p>
-                <hr class="separator">
-                <p class="time">Durée : 2 heures</p>
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="title">
-                <h2>Participation chez Odoo</h2>
-                <img src="img/odoo_participation.png" alt="Participation Odoo" class="project-image">
-            </div>
-            <div class="description">
-                <p>Participation à l'événement Odoo. Découverte de la plateforme et des solutions ERP proposées.</p>
-                <hr class="separator">
-                <p class="time">Durée : à définir</p>
-            </div>
-        </div>
-    </section>
-    <hr>
-
-    <section class="carousel-wrapper">
-        <h1 class="carousel-title">Projets d'École (Carrousel)</h1>
-        <div class="container">
-            <div class="carousel">
-                <div class="carousel-item-container a">
-                    <div class="item">
-                        <h3>Lares</h3>
-                        <img src="img/lares.png" alt="Projet Lares" class="project-image">
-                        <div class="description">
-                            <p>Projet qui à pour but de créer une plateforme de gestion de serrrures</p>
-                            <p class="date">2025 - 2026</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item-container b">
-                    <div class="item">
-                        <h3>Gestion d'un restaurant</h3>
-                        <img src="img/restaurant.png" alt="Projet Restaurant" class="project-image">
-                        <div class="description">
-                            <p>Projet qui à pour but de créer une plateforme de gestion de restaurant (Python / Shell)</p>
-                            <p class="date">2024 - 2025</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item-container c">
-                    <div class="item">
-                        <h3>Gestion Grand Prix F1</h3>
-                        <img src="img/restaurant.png" alt="Projet Restaurant" class="project-image">
-                        <div class="description">
-                            <p>Projet qui à pour but de créer une plateforme de gestion d'un weekend de grand prix en C</p>
-                            <p class="date">2024 - 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <main>
+    <section class="page-hero">
+      <div class="section-label">Projets</div>
+      <h1 class="section-title">Mes <em>projets</em></h1>
+      <p>Les données d'origine, réorganisées pour le style actuel du portfolio.</p>
     </section>
 
-    <hr>
+    <section class="section">
+      <div class="section-label">OpenClassroom</div>
+      <h2 class="section-title">Formations</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;">
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;">
+          <img src="img/formation_js.png" alt="Formation JavaScript"
+            style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+          <div>
+            <div class="badge green">Durée : 15 heures</div>
+            <h3 style="margin:0.85rem 0 0.5rem;">Formation JavaScript</h3>
+            <p style="color:var(--text-muted);">Le but de cette formation était de perfectionner mes lacunes en JavaScript et de pouvoir continuer pleinement dans les projets et pourquoi pas mon métier future.</p>
+          </div>
+        </article>
 
-    <section class="TotalHeures">
-        <div class="total-container">
-            <h1>Bilan Total</h1>
-            <div class="total-content">
-                <div class="total-item">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <h3>Formations</h3>
-                    <p class="total-number">20 heures</p>
-                    <p class="total-detail">OpenClassroom</p>
-                </div>
-                <div class="total-item">
-                    <i class="fa-solid fa-briefcase"></i>
-                    <h3>Expérience Pro</h3>
-                    <p class="total-number">10 heures</p>
-                    <p class="total-detail">Arsalis</p>
-                </div>
-                <div class="total-item">
-                    <i class="fa-solid fa-table-tennis-paddle-ball"></i>
-                    <h3>Sport</h3>
-                    <p class="total-number">10 heures</p>
-                    <p class="total-detail">Tennis</p>
-                </div>
-                <div class="total-item">
-                    <i class="fa-solid fa-code"></i>
-                    <h3>Hackathon</h3>
-                    <p class="total-number">20 heures</p>
-                    <p class="total-detail">EPHEC</p>
-                </div>
-                <div class="total-item">
-                    <i class="fa-solid fa-square-root-variable"></i>
-                    <h3>Cours de Math</h3>
-                    <p class="total-number">10 heures</p>
-                    <p class="total-detail">Rattrapage</p>
-                </div>
-                <div class="total-item">
-                    <i class="fa-solid fa-users"></i>
-                    <h3>Conférences</h3>
-                    <p class="total-number">2 heures</p>
-                    <p class="total-detail">Cloud & Odoo</p>
-                </div>
-                <div class="total-item highlight">
-                    <i class="fa-solid fa-clock"></i>
-                    <h3>Total Valorisable</h3>
-                    <p class="total-number">72 heures</p>
-                    <p class="total-detail">Total des activités</p>
-                </div>
-            </div>
-        </div>
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;">
+          <img src="img/formation_python.png" alt="Formation Python"
+            style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+          <div>
+            <div class="badge green">Durée : 6 heures</div>
+            <h3 style="margin:0.85rem 0 0.5rem;">Formation Python</h3>
+            <p style="color:var(--text-muted);">Le but de cette formation était d'apprendre et de maitriser les bases du langages python. Cette formation m'a permis de me perfectionner dans celui-ci et de pouvoir rendre le projet du Q1 en BAC 2 (gestion de restaurant).</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-        <div class="lightbox-caption" id="lightbox-caption"></div>
+    <section class="section">
+      <div class="section-label">Arsalis</div>
+      <h2 class="section-title">Expérience professionnelle</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;">
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;">
+          <img src="img/ampli.jpg" alt="Prise de mesures sur un ampli"
+            style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+          <div>
+            <div class="badge blue">Durée : 450 heures</div>
+            <h3 style="margin:0.85rem 0 0.5rem;">Prise de mesures sur un ampli</h3>
+            <p style="color:var(--text-muted);">Prise de mesures sur un ampli et par la suite stockage des données pour analyse et diagnostic.</p>
+          </div>
+        </article>
+
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;">
+          <img src="img/IMG_6532.jpg" alt="Soudure de câbles"
+            style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+          <div>
+            <div class="badge blue">Durée : 450 heures</div>
+            <h3 style="margin:0.85rem 0 0.5rem;">Soudure de câbles</h3>
+            <p style="color:var(--text-muted);">Travaux de soudure sur des câbles électroniques. Cette expérience m'a permis d'acquérir des compétences techniques précises en électronique.</p>
+          </div>
+        </article>
+
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;">
+          <img src="img/IMG_6533.jpg" alt="Soudure de composants"
+            style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+          <div>
+            <div class="badge blue">Durée : 450 heures</div>
+            <h3 style="margin:0.85rem 0 0.5rem;">Soudure de composants</h3>
+            <p style="color:var(--text-muted);">Poursuite des travaux de soudure et manipulation de composants électroniques pour la réparation et l'assemblage d'équipements.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Tennis Club</div>
+      <h2 class="section-title">Sport</h2>
+      <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;max-width:520px;">
+        <img src="img/tennis.png" alt="Logo Tennis"
+          style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+        <div>
+          <div class="badge yellow">Durée : 15 années</div>
+          <h3 style="margin:0.85rem 0 0.5rem;">Sport</h3>
+          <p style="color:var(--text-muted);">Depuis tout petit (mes 5 ans) je pratique ce sport pour suivre mon père dans cette discipline que j'aime pratiquer avec mes amis, ma famille et autres. Je possède donc un classement de tennis.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-label">EPHEC</div>
+      <h2 class="section-title">Hackathon</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;">
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;">
+          <img src="img/team_hacka.png" alt="Équipe Hackathon"
+            style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+          <div>
+            <div class="badge green">Durée : 48 heures</div>
+            <h3 style="margin:0.85rem 0 0.5rem;">Hackathon</h3>
+            <p style="color:var(--text-muted);">Participation au hackathon de l'EPHEC. Travail en équipe sur un projet innovant dans un temps limité.</p>
+          </div>
+        </article>
+
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;">
+          <img src="img/message1_hacka.png" alt="Messages Hackathon"
+            style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+          <div>
+            <div class="badge green">Durée : 48 heures</div>
+            <h3 style="margin:0.85rem 0 0.5rem;">Messages Hackathon</h3>
+            <p style="color:var(--text-muted);">Échanges et collaboration durant le hackathon. Communication et coordination de l'équipe pour mener à bien le projet.</p>
+          </div>
+        </article>
+
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;">
+          <img src="img/hackat_pc.jpg" alt="Pc démonté"
+            style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+          <div>
+            <div class="badge green">Durée : 48 heures</div>
+            <h3 style="margin:0.85rem 0 0.5rem;">Photo du pc utilisé</h3>
+            <p style="color:var(--text-muted);">Utilisation et démontage d'un vieux HP pour préparer via une vielle machine à écrire un Apple II fonctionnel.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Mathématiques</div>
+      <h2 class="section-title">Cours de rattrapage</h2>
+      <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;max-width:520px;">
+        <img src="img/math_integral.jpg" alt="Cours de Math"
+          style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+        <div>
+          <div class="badge yellow">Durée : 10 heures</div>
+          <h3 style="margin:0.85rem 0 0.5rem;">Rattrapage Math</h3>
+          <p style="color:var(--text-muted);">Cours de rattrapage en mathématiques pour renforcer mes compétences et combler mes lacunes dans certains domaines clés.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Conférences</div>
+      <h2 class="section-title">Rencontres et présentations</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;">
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;">
+          <img src="img/conference_azure.png" alt="Conférence Azure"
+            style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+          <div>
+            <div class="badge blue">Durée : 2 heures</div>
+            <h3 style="margin:0.85rem 0 0.5rem;">Cloud avec M365 et Azure Infrastructure</h3>
+            <p style="color:var(--text-muted);">Conférence donnée le 3 novembre 2025 par Kevin Keurvels de la société Axentys : Services et support informatiques pour professionnels. Cette conférence a permis d'explorer les solutions cloud Microsoft 365 et Azure Infrastructure.</p>
+          </div>
+        </article>
+
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:1rem;">
+          <img src="img/odoo_participation.png" alt="Participation Odoo"
+            style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border);">
+          <div>
+            <div class="badge blue">Durée : 3 heures</div>
+            <h3 style="margin:0.85rem 0 0.5rem;">Participation chez Odoo</h3>
+            <p style="color:var(--text-muted);">Participation à l'événement Odoo. Découverte de la plateforme et des solutions ERP proposées.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Projets d'école</div>
+      <h2 class="section-title">Carrousel historique</h2>
+      <div class="carousel-container reveal">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Précédent">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track">
+            <article class="carousel-item card" style="display:flex;flex-direction:column;gap:1rem;">
+              <img src="img/lares.png" alt="Projet Lares" style="max-height:300px;object-fit:contain;width:auto;margin:0 auto;">
+              <div>
+                <div class="badge green">2025 - 2026</div>
+                <h3 style="margin:0.85rem 0 0.5rem;">Lares</h3>
+                <p style="color:var(--text-muted);">Projet qui à pour but de créer une plateforme de gestion de serrrures.</p>
+              </div>
+            </article>
+
+            <article class="carousel-item card" style="display:flex;flex-direction:column;gap:1rem;">
+              <img src="img/Gestion_restau.png" alt="Projet Gestion d'un restaurant">
+              <div>
+                <div class="badge green">2024 - 2025</div>
+                <h3 style="margin:0.85rem 0 0.5rem;">Gestion d'un restaurant</h3>
+                <p style="color:var(--text-muted);">Projet qui à pour but de créer une plateforme de gestion de restaurant (Python / Shell).</p>
+              </div>
+            </article>
+
+            <article class="carousel-item card" style="display:flex;flex-direction:column;gap:1rem;">
+              <img src="img/restaurant.png" alt="Projet Grand Prix F1">
+              <div>
+                <div class="badge green">2024 - 2025</div>
+                <h3 style="margin:0.85rem 0 0.5rem;">Gestion Grand Prix F1</h3>
+                <p style="color:var(--text-muted);">Projet qui à pour but de créer une plateforme de gestion d'un weekend de grand prix en C.</p>
+              </div>
+            </article>
+
+            <article class="carousel-item card" style="display:flex;flex-direction:column;gap:1rem;">
+              <img src="img/zikfreak.png" alt="Projet ZikFreak">
+              <div>
+                <div class="badge green">2024 - 2025</div>
+                <h3 style="margin:0.85rem 0 0.5rem;">ZikFreak</h3>
+                <p style="color:var(--text-muted);">Plateforme web pour découvrir et réserver des studios avec une interface simple et visuelle.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn-next" aria-label="Suivant">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="carousel-dots">
+          <button class="carousel-dot active" data-slide="0" aria-label="Diapo 1"></button>
+          <button class="carousel-dot" data-slide="1" aria-label="Diapo 2"></button>
+          <button class="carousel-dot" data-slide="2" aria-label="Diapo 3"></button>
+          <button class="carousel-dot" data-slide="3" aria-label="Diapo 4"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Bilan</div>
+      <h2 class="section-title">Total valorisable</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;">
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:0.5rem;align-items:flex-start;">
+          <i class="fa-solid fa-graduation-cap" style="color:var(--accent);font-size:1.2rem;"></i>
+          <h3>Formations</h3>
+          <p style="font-size:1.5rem;font-weight:700;color:var(--text);">20 heures</p>
+          <p style="color:var(--text-muted);">OpenClassroom</p>
+        </article>
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:0.5rem;align-items:flex-start;">
+          <i class="fa-solid fa-briefcase" style="color:var(--accent);font-size:1.2rem;"></i>
+          <h3>Expérience Pro</h3>
+          <p style="font-size:1.5rem;font-weight:700;color:var(--text);">10 heures</p>
+          <p style="color:var(--text-muted);">Arsalis</p>
+        </article>
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:0.5rem;align-items:flex-start;">
+          <i class="fa-solid fa-table-tennis-paddle-ball" style="color:var(--accent);font-size:1.2rem;"></i>
+          <h3>Sport</h3>
+          <p style="font-size:1.5rem;font-weight:700;color:var(--text);">10 heures</p>
+          <p style="color:var(--text-muted);">Tennis Club</p>
+        </article>
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:0.5rem;align-items:flex-start;">
+          <i class="fa-solid fa-code" style="color:var(--accent);font-size:1.2rem;"></i>
+          <h3>Hackathon</h3>
+          <p style="font-size:1.5rem;font-weight:700;color:var(--text);">20 heures</p>
+          <p style="color:var(--text-muted);">EPHEC</p>
+        </article>
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:0.5rem;align-items:flex-start;">
+          <i class="fa-solid fa-square-root-variable" style="color:var(--accent);font-size:1.2rem;"></i>
+          <h3>Cours de Math</h3>
+          <p style="font-size:1.5rem;font-weight:700;color:var(--text);">10 heures</p>
+          <p style="color:var(--text-muted);">Rattrapage</p>
+        </article>
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:0.5rem;align-items:flex-start;">
+          <i class="fa-solid fa-users" style="color:var(--accent);font-size:1.2rem;"></i>
+          <h3>Conférences</h3>
+          <p style="font-size:1.5rem;font-weight:700;color:var(--text);">5 heures</p>
+          <p style="color:var(--text-muted);">Cloud & Odoo</p>
+        </article>
+        <article class="card reveal" style="display:flex;flex-direction:column;gap:0.5rem;align-items:flex-start;border-color:rgba(0,229,160,.35);background:var(--accent-dim);">
+          <i class="fa-solid fa-clock" style="color:var(--accent);font-size:1.2rem;"></i>
+          <h3>Total Valorisable</h3>
+          <p style="font-size:1.5rem;font-weight:700;color:var(--text);">75 heures</p>
+          <p style="color:var(--text-muted);">Total des activités</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button type="button" class="lightbox-close" aria-label="Fermer l'image">&times;</button>
+    <img class="lightbox-content" id="lightbox-img" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo"><span>~/</span>simon.dev</span>
+        <p>Développeur web passionné par la création d'expériences utilisateur modernes et intuitives.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="projects.html">Projets</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Me suivre</h4>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/simon.dierickx.10" target="_blank" rel="noopener" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" title="Discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:dierickxsimon198@gmail.com">dierickxsimon198@gmail.com</a>
+        <a href="tel:+32499500333">+32 499 50 03 33</a>
+        <p>Belgique</p>
+      </div>
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>À propos</h3>
-                <p>Développeur web passionné par la création d'expériences utilisateur modernes et intuitives.</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Navigation</h3>
-                <p><a href="index.html">Accueil</a></p>
-                <p><a href="about.html">À propos</a></p>
-                <p><a href="projects.html">Projets</a></p>
-                <p><a href="contact.html">Contact</a></p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Me suivre</h3>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/simon.dierickx.10"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-discord"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <a href="mailto:dierickxsimon198@gmail.com">📧 dierickxsimon198@gmail.com</a><br>
-                <a href="tel:+32499500333">📱 +32 499 50 03 33</a>
-                <p>📍 Belgique</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 Dierickx Simon. Tous droits réservés.</p>
-        </div>
-    </footer>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Dierickx Simon. Tous droits réservés.</p>
+    </div>
+  </footer>
 </body>
 
 </html>
