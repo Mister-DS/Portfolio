@@ -165,6 +165,106 @@ body.light-mode #theme-toggle {
   background: var(--bg-1);
 }
 
+/* -------- HAMBURGER MENU (MOBILE) -------- */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--bg-3);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  gap: 4px;
+  padding: 0;
+}
+
+.hamburger-btn span {
+  width: 20px;
+  height: 2px;
+  background: var(--text-muted);
+  border-radius: 1px;
+  transition: var(--transition);
+}
+
+.hamburger-btn:hover {
+  border-color: var(--accent);
+  background: var(--bg-2);
+}
+
+.hamburger-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+body.light-mode .hamburger-btn {
+  background: var(--bg-1);
+}
+
+/* -------- RESPONSIVE NAV -------- */
+@media (max-width: 768px) {
+  header {
+    padding: 0 1rem;
+  }
+
+  nav {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(10, 12, 15, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition);
+    z-index: 99;
+  }
+
+  body.light-mode nav {
+    background: rgba(246, 248, 252, 0.95);
+  }
+
+  nav.active {
+    max-height: 200px;
+  }
+
+  nav a {
+    padding: 1rem 1.5rem;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-2);
+    font-size: 0.9rem;
+  }
+
+  nav a:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    order: -1;
+  }
+
+  .logo {
+    font-size: 0.85rem;
+  }
+
+  main {
+    padding-top: 64px;
+  }
+}
+
 /* -------- PAGE WRAPPER -------- */
 main {
   position: relative;

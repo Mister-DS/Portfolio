@@ -9,6 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (a.getAttribute('href') === path) a.classList.add('active');
   });
 
+  // Hamburger menu
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const nav = document.querySelector('nav');
+  if (hamburgerBtn && nav) {
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      hamburgerBtn.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburgerBtn.classList.remove('active');
+        nav.classList.remove('active');
+      });
+    });
+  }
 
   const toggle = document.getElementById('theme-toggle');
   if (toggle) {
